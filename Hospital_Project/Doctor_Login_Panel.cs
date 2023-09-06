@@ -166,7 +166,7 @@ namespace Hospital_Project
 
         private void Doktor_Giris_Paneli_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms["Giris_Paneli"].Show();
+            Application.OpenForms["Login_Panel"].Show();
         }
     }
 }

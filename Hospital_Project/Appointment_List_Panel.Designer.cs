@@ -44,7 +44,7 @@
             this.groupBox1.Size = new System.Drawing.Size(776, 341);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Randevular";
+            this.groupBox1.Text = "Appointments";
             // 
             // dataGridView1
             // 
@@ -60,15 +60,16 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // Randevu_Listesi_Paneli
+            // Appointment_List_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 360);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Randevu_Listesi_Paneli";
-            this.Text = "Randevu_Listesi_Paneli";
+            this.Name = "Appointment_List_Panel";
+            this.Text = "Appointment_List_Panel";
             this.Load += new System.EventHandler(this.Randevu_Listesi_Paneli_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

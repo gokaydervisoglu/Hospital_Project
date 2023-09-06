@@ -90,7 +90,7 @@ namespace Hospital_Project
         {
             if (key == true)
             {
-                Application.OpenForms["Giris_Paneli"].Close();
+                Application.OpenForms["Login_Panel"].Close();
             }
         }
 
@@ -185,7 +185,7 @@ namespace Hospital_Project
         {
             key = false;
             this.Close();
-            Application.OpenForms["Giris_Paneli"].Show();
+            Application.OpenForms["Login_Panel"].Show();
         }
 
         private void btn_randevulst_Click(object sender, EventArgs e)
@@ -264,6 +264,11 @@ namespace Hospital_Project
         {
             Secretary_Notice_Panel fr = new Secretary_Notice_Panel();
             fr.Show();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -45,7 +45,7 @@
             this.btn_giris.Name = "btn_giris";
             this.btn_giris.Size = new System.Drawing.Size(108, 23);
             this.btn_giris.TabIndex = 3;
-            this.btn_giris.Text = "Giris Yap";
+            this.btn_giris.Text = "Login";
             this.btn_giris.UseVisualStyleBackColor = true;
             this.btn_giris.Click += new System.EventHandler(this.btn_giris_Click);
             // 
@@ -73,11 +73,11 @@
             this.sifre_label.AutoSize = true;
             this.sifre_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.sifre_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.sifre_label.Location = new System.Drawing.Point(165, 166);
+            this.sifre_label.Location = new System.Drawing.Point(123, 169);
             this.sifre_label.Name = "sifre_label";
-            this.sifre_label.Size = new System.Drawing.Size(58, 28);
+            this.sifre_label.Size = new System.Drawing.Size(102, 28);
             this.sifre_label.TabIndex = 15;
-            this.sifre_label.Text = "Şifre:";
+            this.sifre_label.Text = "Password:";
             // 
             // tc_txt
             // 
@@ -94,24 +94,24 @@
             this.no_label.AutoSize = true;
             this.no_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.no_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.no_label.Location = new System.Drawing.Point(117, 134);
+            this.no_label.Location = new System.Drawing.Point(153, 138);
             this.no_label.Name = "no_label";
-            this.no_label.Size = new System.Drawing.Size(106, 28);
+            this.no_label.Size = new System.Drawing.Size(70, 28);
             this.no_label.TabIndex = 13;
-            this.no_label.Text = "Kimlik No:";
+            this.no_label.Text = "ID No:";
             // 
             // btnhatirla
             // 
             this.btnhatirla.AutoSize = true;
-            this.btnhatirla.Location = new System.Drawing.Point(387, 246);
+            this.btnhatirla.Location = new System.Drawing.Point(363, 240);
             this.btnhatirla.Name = "btnhatirla";
-            this.btnhatirla.Size = new System.Drawing.Size(98, 20);
+            this.btnhatirla.Size = new System.Drawing.Size(119, 20);
             this.btnhatirla.TabIndex = 26;
-            this.btnhatirla.Text = "Beni Hatırla";
+            this.btnhatirla.Text = "Remember me";
             this.btnhatirla.UseVisualStyleBackColor = true;
             this.btnhatirla.CheckedChanged += new System.EventHandler(this.btnhatirla_CheckedChanged);
             // 
-            // Sekreter_Giris_Paneli
+            // Secretary_Login_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,10 +124,11 @@
             this.Controls.Add(this.sifre_label);
             this.Controls.Add(this.tc_txt);
             this.Controls.Add(this.no_label);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Sekreter_Giris_Paneli";
+            this.Name = "Secretary_Login_Panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sekreter_Giris_Paneli";
+            this.Text = "Secretary Login Panel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sekreter_Giris_Paneli_FormClosing);
             this.Load += new System.EventHandler(this.Sekreter_Giris_Paneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

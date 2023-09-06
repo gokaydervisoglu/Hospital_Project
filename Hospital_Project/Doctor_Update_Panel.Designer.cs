@@ -52,7 +52,7 @@
             this.btn_geri.Name = "btn_geri";
             this.btn_geri.Size = new System.Drawing.Size(75, 23);
             this.btn_geri.TabIndex = 54;
-            this.btn_geri.Text = "Geri";
+            this.btn_geri.Text = "Return";
             this.btn_geri.UseVisualStyleBackColor = true;
             this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
             // 
@@ -64,7 +64,7 @@
             this.btn_guncelle.Name = "btn_guncelle";
             this.btn_guncelle.Size = new System.Drawing.Size(125, 23);
             this.btn_guncelle.TabIndex = 53;
-            this.btn_guncelle.Text = "Güncelle";
+            this.btn_guncelle.Text = "Update";
             this.btn_guncelle.UseVisualStyleBackColor = true;
             this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
@@ -81,11 +81,11 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(128, 264);
+            this.label6.Location = new System.Drawing.Point(84, 265);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 28);
+            this.label6.Size = new System.Drawing.Size(102, 28);
             this.label6.TabIndex = 51;
-            this.label6.Text = "Şifre:";
+            this.label6.Text = "Password:";
             // 
             // soyad_txt
             // 
@@ -100,11 +100,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(45, 155);
+            this.label2.Location = new System.Drawing.Point(21, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 28);
+            this.label2.Size = new System.Drawing.Size(165, 28);
             this.label2.TabIndex = 43;
-            this.label2.Text = "Doktor Soyad:";
+            this.label2.Text = "Doctor Surname:";
             // 
             // ad_txt
             // 
@@ -119,11 +119,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(75, 122);
+            this.label1.Location = new System.Drawing.Point(46, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 28);
+            this.label1.Size = new System.Drawing.Size(138, 28);
             this.label1.TabIndex = 41;
-            this.label1.Text = "Doktor Ad:";
+            this.label1.Text = "Doctor Name:";
             // 
             // pictureBox1
             // 
@@ -141,11 +141,11 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(50, 222);
+            this.label3.Location = new System.Drawing.Point(36, 226);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 28);
+            this.label3.Size = new System.Drawing.Size(148, 28);
             this.label3.TabIndex = 55;
-            this.label3.Text = "Doktor Branş:";
+            this.label3.Text = "Doktor Branch:";
             // 
             // brans_txt
             // 
@@ -163,9 +163,9 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(78, 188);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 28);
+            this.label5.Size = new System.Drawing.Size(106, 28);
             this.label5.TabIndex = 58;
-            this.label5.Text = "Doktor TC:";
+            this.label5.Text = "Doctor TC:";
             // 
             // tc_txt
             // 
@@ -176,7 +176,7 @@
             this.tc_txt.Size = new System.Drawing.Size(125, 22);
             this.tc_txt.TabIndex = 59;
             // 
-            // Doktor_Güncelleme_Paneli
+            // Doctor_Update_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,9 +194,10 @@
             this.Controls.Add(this.ad_txt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Doktor_Güncelleme_Paneli";
-            this.Text = "Doktor_Güncelleme_Paneli";
+            this.Name = "Doctor_Update_Panel";
+            this.Text = "Doctor Update Panel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Doktor_Güncelleme_Paneli_FormClosing);
             this.Load += new System.EventHandler(this.Doktor_Güncelleme_Paneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

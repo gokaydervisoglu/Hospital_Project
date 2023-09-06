@@ -24,7 +24,7 @@ namespace Hospital_Project
         {
             if (key == true)
             {
-                Application.OpenForms["Giris_Paneli"].Close();
+                Application.OpenForms["Login_Panel"].Close();
             }
         
         }
@@ -174,6 +174,11 @@ namespace Hospital_Project
             //Randevu Alma
             int selectedRow = dataGridView2.CurrentCell.RowIndex;
             id_txt.Text = dataGridView2.Rows[selectedRow].Cells[0].Value.ToString();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

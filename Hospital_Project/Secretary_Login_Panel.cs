@@ -66,7 +66,7 @@ namespace Hospital_Project
 
         private void Sekreter_Giris_Paneli_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms["Giris_Paneli"].Show();
+            Application.OpenForms["Login_Panel"].Show();
         }
 
         private void btnhatirla_CheckedChanged(object sender, EventArgs e)

@@ -67,7 +67,7 @@ namespace Hospital_Project
         {
             if (key == true)
             {
-                Application.OpenForms["Giris_Paneli"].Close();
+                Application.OpenForms["Login_Panel"].Close();
             }
         }
 
@@ -79,14 +79,14 @@ namespace Hospital_Project
 
         private void btn_cikis_Click(object sender, EventArgs e)
         {
-            Application.OpenForms["Giris_Paneli"].Close();
+            Application.OpenForms["Login_Panel"].Close();
         }
 
         private void btn_geri_Click(object sender, EventArgs e)
         {
             key = false;
             this.Close();
-            Application.OpenForms["Giris_Paneli"].Show();
+            Application.OpenForms["Login_Panel"].Show();
         }
 
 

@@ -46,11 +46,11 @@
             this.no_label.AutoSize = true;
             this.no_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.no_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.no_label.Location = new System.Drawing.Point(119, 118);
+            this.no_label.Location = new System.Drawing.Point(155, 115);
             this.no_label.Name = "no_label";
-            this.no_label.Size = new System.Drawing.Size(106, 28);
+            this.no_label.Size = new System.Drawing.Size(70, 28);
             this.no_label.TabIndex = 0;
-            this.no_label.Text = "Kimlik No:";
+            this.no_label.Text = "ID No:";
             // 
             // tc_txt
             // 
@@ -67,11 +67,11 @@
             this.sifre_label.AutoSize = true;
             this.sifre_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.sifre_label.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.sifre_label.Location = new System.Drawing.Point(167, 148);
+            this.sifre_label.Location = new System.Drawing.Point(124, 149);
             this.sifre_label.Name = "sifre_label";
-            this.sifre_label.Size = new System.Drawing.Size(58, 28);
+            this.sifre_label.Size = new System.Drawing.Size(102, 28);
             this.sifre_label.TabIndex = 2;
-            this.sifre_label.Text = "Şifre:";
+            this.sifre_label.Text = "Password:";
             // 
             // sifre_txt
             // 
@@ -86,20 +86,20 @@
             this.btn_giris.Location = new System.Drawing.Point(231, 175);
             this.btn_giris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_giris.Name = "btn_giris";
-            this.btn_giris.Size = new System.Drawing.Size(108, 23);
+            this.btn_giris.Size = new System.Drawing.Size(108, 38);
             this.btn_giris.TabIndex = 10;
-            this.btn_giris.Text = "Giris Yap";
+            this.btn_giris.Text = "Login";
             this.btn_giris.UseVisualStyleBackColor = true;
             this.btn_giris.Click += new System.EventHandler(this.btn_giris_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 242);
+            this.label1.Location = new System.Drawing.Point(172, 243);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 16);
+            this.label1.Size = new System.Drawing.Size(99, 16);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Üye değil misiniz?";
+            this.label1.Text = "Not a member?";
             // 
             // kayitol_label
             // 
@@ -108,20 +108,20 @@
             this.kayitol_label.LinkColor = System.Drawing.Color.Blue;
             this.kayitol_label.Location = new System.Drawing.Point(272, 241);
             this.kayitol_label.Name = "kayitol_label";
-            this.kayitol_label.Size = new System.Drawing.Size(61, 17);
+            this.kayitol_label.Size = new System.Drawing.Size(62, 17);
             this.kayitol_label.TabIndex = 12;
             this.kayitol_label.TabStop = true;
-            this.kayitol_label.Text = "Kayit Ol!";
+            this.kayitol_label.Text = "Register!";
             this.kayitol_label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.kayitol_label_LinkClicked_1);
             // 
             // btnhatirla
             // 
             this.btnhatirla.AutoSize = true;
-            this.btnhatirla.Location = new System.Drawing.Point(386, 243);
+            this.btnhatirla.Location = new System.Drawing.Point(363, 244);
             this.btnhatirla.Name = "btnhatirla";
-            this.btnhatirla.Size = new System.Drawing.Size(98, 20);
+            this.btnhatirla.Size = new System.Drawing.Size(119, 20);
             this.btnhatirla.TabIndex = 13;
-            this.btnhatirla.Text = "Beni Hatırla";
+            this.btnhatirla.Text = "Remember me";
             this.btnhatirla.UseVisualStyleBackColor = true;
             this.btnhatirla.CheckedChanged += new System.EventHandler(this.btnhatirla_CheckedChanged);
             // 
@@ -131,10 +131,10 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.Blue;
             this.linkLabel1.Location = new System.Drawing.Point(187, 215);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(137, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(144, 16);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Şifrenizi mi unuttunuz ?";
+            this.linkLabel1.Text = "Forgot your password?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox1
@@ -148,7 +148,7 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // Hasta_Giris_Paneli
+            // Patient_Login_Panel
             // 
             this.AcceptButton = this.btn_giris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,10 +165,11 @@
             this.Controls.Add(this.sifre_label);
             this.Controls.Add(this.tc_txt);
             this.Controls.Add(this.no_label);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Hasta_Giris_Paneli";
+            this.Name = "Patient_Login_Panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hasta_Giris_Paneli";
+            this.Text = "Patient Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hasta_Giris_Paneli_FormClosing_1);
             this.Load += new System.EventHandler(this.Hasta_Giris_Paneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

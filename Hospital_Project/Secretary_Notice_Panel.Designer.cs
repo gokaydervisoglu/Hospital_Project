@@ -35,13 +35,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tc_txt = new System.Windows.Forms.TextBox();
-            this.sifre_txt = new System.Windows.Forms.TextBox();
-            this.mail_txt = new System.Windows.Forms.TextBox();
             this.sifre_kurtar_btn = new System.Windows.Forms.Button();
+            this.mail_txt = new System.Windows.Forms.TextBox();
+            this.sifre_txt = new System.Windows.Forms.TextBox();
+            this.tc_txt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -57,7 +57,7 @@
             this.groupBox2.Size = new System.Drawing.Size(407, 346);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Doktor Duyuruları";
+            this.groupBox2.Text = "Doctor Info";
             // 
             // dataGridView2
             // 
@@ -76,10 +76,10 @@
             this.doktor_duyuru_txt.AutoSize = true;
             this.doktor_duyuru_txt.Location = new System.Drawing.Point(520, 364);
             this.doktor_duyuru_txt.Name = "doktor_duyuru_txt";
-            this.doktor_duyuru_txt.Size = new System.Drawing.Size(131, 20);
+            this.doktor_duyuru_txt.Size = new System.Drawing.Size(92, 20);
             this.doktor_duyuru_txt.TabIndex = 2;
             this.doktor_duyuru_txt.TabStop = true;
-            this.doktor_duyuru_txt.Text = "Doktor Duyuruları";
+            this.doktor_duyuru_txt.Text = "Doctor Info";
             this.doktor_duyuru_txt.UseVisualStyleBackColor = true;
             // 
             // hasta_duyuru_txt
@@ -87,10 +87,10 @@
             this.hasta_duyuru_txt.AutoSize = true;
             this.hasta_duyuru_txt.Location = new System.Drawing.Point(366, 364);
             this.hasta_duyuru_txt.Name = "hasta_duyuru_txt";
-            this.hasta_duyuru_txt.Size = new System.Drawing.Size(127, 20);
+            this.hasta_duyuru_txt.Size = new System.Drawing.Size(85, 20);
             this.hasta_duyuru_txt.TabIndex = 3;
             this.hasta_duyuru_txt.TabStop = true;
-            this.hasta_duyuru_txt.Text = "Hasta Duyuruları";
+            this.hasta_duyuru_txt.Text = "Patint Info";
             this.hasta_duyuru_txt.UseVisualStyleBackColor = true;
             this.hasta_duyuru_txt.CheckedChanged += new System.EventHandler(this.hasta_duyuru_txt_CheckedChanged);
             // 
@@ -102,7 +102,7 @@
             this.groupBox1.Size = new System.Drawing.Size(286, 183);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Bilgiler";
+            this.groupBox1.Text = "Informations";
             // 
             // dataGridView1
             // 
@@ -129,54 +129,17 @@
             this.groupBox3.Size = new System.Drawing.Size(283, 157);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Hızlı Erişim";
+            this.groupBox3.Text = "Fast access";
             // 
-            // label1
+            // sifre_kurtar_btn
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hasta TC:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Hasta Sifre:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Hasta Mail:";
-            // 
-            // tc_txt
-            // 
-            this.tc_txt.Location = new System.Drawing.Point(112, 27);
-            this.tc_txt.Name = "tc_txt";
-            this.tc_txt.Size = new System.Drawing.Size(165, 22);
-            this.tc_txt.TabIndex = 3;
-            // 
-            // sifre_txt
-            // 
-            this.sifre_txt.Location = new System.Drawing.Point(112, 55);
-            this.sifre_txt.Name = "sifre_txt";
-            this.sifre_txt.Size = new System.Drawing.Size(165, 22);
-            this.sifre_txt.TabIndex = 4;
+            this.sifre_kurtar_btn.Location = new System.Drawing.Point(75, 115);
+            this.sifre_kurtar_btn.Name = "sifre_kurtar_btn";
+            this.sifre_kurtar_btn.Size = new System.Drawing.Size(120, 23);
+            this.sifre_kurtar_btn.TabIndex = 6;
+            this.sifre_kurtar_btn.Text = "Help Password";
+            this.sifre_kurtar_btn.UseVisualStyleBackColor = true;
+            this.sifre_kurtar_btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // mail_txt
             // 
@@ -185,17 +148,54 @@
             this.mail_txt.Size = new System.Drawing.Size(165, 22);
             this.mail_txt.TabIndex = 5;
             // 
-            // sifre_kurtar_btn
+            // sifre_txt
             // 
-            this.sifre_kurtar_btn.Location = new System.Drawing.Point(75, 115);
-            this.sifre_kurtar_btn.Name = "sifre_kurtar_btn";
-            this.sifre_kurtar_btn.Size = new System.Drawing.Size(120, 23);
-            this.sifre_kurtar_btn.TabIndex = 6;
-            this.sifre_kurtar_btn.Text = "Sifre Kurtar";
-            this.sifre_kurtar_btn.UseVisualStyleBackColor = true;
-            this.sifre_kurtar_btn.Click += new System.EventHandler(this.button1_Click);
+            this.sifre_txt.Location = new System.Drawing.Point(112, 55);
+            this.sifre_txt.Name = "sifre_txt";
+            this.sifre_txt.Size = new System.Drawing.Size(165, 22);
+            this.sifre_txt.TabIndex = 4;
             // 
-            // Sekreter_Duyuru_Paneli
+            // tc_txt
+            // 
+            this.tc_txt.Location = new System.Drawing.Point(112, 27);
+            this.tc_txt.Name = "tc_txt";
+            this.tc_txt.Size = new System.Drawing.Size(165, 22);
+            this.tc_txt.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(44, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Pt Mail:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Pt Password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(51, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Pt TC:";
+            // 
+            // Secretary_Notice_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,8 +205,9 @@
             this.Controls.Add(this.hasta_duyuru_txt);
             this.Controls.Add(this.doktor_duyuru_txt);
             this.Controls.Add(this.groupBox2);
-            this.Name = "Sekreter_Duyuru_Paneli";
-            this.Text = "Sekreter_Duyuru_Paneli";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "Secretary_Notice_Panel";
+            this.Text = "Secretary Notice Panel";
             this.Load += new System.EventHandler(this.Sekreter_Duyuru_Paneli_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

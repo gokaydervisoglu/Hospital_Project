@@ -66,19 +66,19 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(59, 124);
+            this.label3.Location = new System.Drawing.Point(95, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 28);
+            this.label3.Size = new System.Drawing.Size(70, 28);
             this.label3.TabIndex = 32;
-            this.label3.Text = "Kimlik No:";
+            this.label3.Text = "ID No:";
             // 
             // btn_kurtar
             // 
             this.btn_kurtar.Location = new System.Drawing.Point(171, 221);
             this.btn_kurtar.Name = "btn_kurtar";
-            this.btn_kurtar.Size = new System.Drawing.Size(164, 23);
+            this.btn_kurtar.Size = new System.Drawing.Size(164, 48);
             this.btn_kurtar.TabIndex = 33;
-            this.btn_kurtar.Text = "Kurtarma Talebi Olustur";
+            this.btn_kurtar.Text = "Create Recovery Request";
             this.btn_kurtar.UseVisualStyleBackColor = true;
             this.btn_kurtar.Click += new System.EventHandler(this.btn_kurtar_Click);
             // 
@@ -96,18 +96,18 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(81, 156);
+            this.label4.Location = new System.Drawing.Point(89, 160);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 28);
+            this.label4.Size = new System.Drawing.Size(76, 28);
             this.label4.TabIndex = 35;
-            this.label4.Text = "Telefon:";
+            this.label4.Text = "Phone:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(92, 188);
+            this.label1.Location = new System.Drawing.Point(92, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 28);
             this.label1.TabIndex = 36;
@@ -127,9 +127,9 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(94, 272);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 16);
+            this.label2.Size = new System.Drawing.Size(248, 16);
             this.label2.TabIndex = 38;
-            this.label2.Text = "(Lütfen tüm bilgileri eksiksiz giriniz!)";
+            this.label2.Text = "(Please enter all information completely!)";
             // 
             // btn_geri
             // 
@@ -139,11 +139,11 @@
             this.btn_geri.Name = "btn_geri";
             this.btn_geri.Size = new System.Drawing.Size(75, 23);
             this.btn_geri.TabIndex = 55;
-            this.btn_geri.Text = "Geri";
+            this.btn_geri.Text = "Return";
             this.btn_geri.UseVisualStyleBackColor = true;
             this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
             // 
-            // Sifre_Unuttum_Paneli
+            // Password_Forgot_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,9 +158,10 @@
             this.Controls.Add(this.tc_txt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Sifre_Unuttum_Paneli";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "Password_Forgot_Panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sifre_Unuttum_Paneli";
+            this.Text = "Password Help";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sifre_Unuttum_Paneli_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

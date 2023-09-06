@@ -41,39 +41,42 @@
             this.doktor_label.AutoSize = true;
             this.doktor_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.doktor_label.Font = new System.Drawing.Font("Calibri Light", 13.8F);
-            this.doktor_label.Location = new System.Drawing.Point(188, 300);
+            this.doktor_label.Location = new System.Drawing.Point(185, 305);
             this.doktor_label.Name = "doktor_label";
-            this.doktor_label.Size = new System.Drawing.Size(122, 28);
+            this.doktor_label.Size = new System.Drawing.Size(131, 28);
             this.doktor_label.TabIndex = 11;
-            this.doktor_label.Text = "Doktor Giris";
+            this.doktor_label.Text = "Doctor Login";
             // 
             // sekreter_label
             // 
             this.sekreter_label.AutoSize = true;
             this.sekreter_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.sekreter_label.Font = new System.Drawing.Font("Calibri Light", 13.8F);
-            this.sekreter_label.Location = new System.Drawing.Point(181, 196);
+            this.sekreter_label.Location = new System.Drawing.Point(173, 199);
             this.sekreter_label.Name = "sekreter_label";
-            this.sekreter_label.Size = new System.Drawing.Size(135, 28);
+            this.sekreter_label.Size = new System.Drawing.Size(154, 28);
             this.sekreter_label.TabIndex = 10;
-            this.sekreter_label.Text = "Sekreter Giris";
+            this.sekreter_label.Text = "Secretary Login";
             // 
             // hasta_label
             // 
             this.hasta_label.AutoSize = true;
             this.hasta_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.hasta_label.Font = new System.Drawing.Font("Calibri Light", 13.8F);
-            this.hasta_label.Location = new System.Drawing.Point(193, 102);
+            this.hasta_label.Location = new System.Drawing.Point(184, 101);
             this.hasta_label.Name = "hasta_label";
-            this.hasta_label.Size = new System.Drawing.Size(111, 28);
+            this.hasta_label.Size = new System.Drawing.Size(132, 28);
             this.hasta_label.TabIndex = 9;
-            this.hasta_label.Text = "Hasta Giris";
+            this.hasta_label.Text = "Patient Login";
             // 
             // btn_hasta
             // 
             this.btn_hasta.BackColor = System.Drawing.Color.Transparent;
             this.btn_hasta.BackgroundImage = global::Hospital_Project.Properties.Resources.kullanici_logo;
             this.btn_hasta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_hasta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_hasta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_hasta.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_hasta.Location = new System.Drawing.Point(193, 30);
             this.btn_hasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_hasta.Name = "btn_hasta";
@@ -87,6 +90,9 @@
             // 
             this.btn_sekreter.BackgroundImage = global::Hospital_Project.Properties.Resources.sekreter_logo;
             this.btn_sekreter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_sekreter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_sekreter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sekreter.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_sekreter.Location = new System.Drawing.Point(192, 126);
             this.btn_sekreter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_sekreter.Name = "btn_sekreter";
@@ -100,6 +106,9 @@
             // 
             this.btn_doktor.BackgroundImage = global::Hospital_Project.Properties.Resources.doktor_logo;
             this.btn_doktor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_doktor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_doktor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_doktor.ForeColor = System.Drawing.SystemColors.Window;
             this.btn_doktor.Location = new System.Drawing.Point(193, 230);
             this.btn_doktor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_doktor.Name = "btn_doktor";
@@ -109,7 +118,7 @@
             this.btn_doktor.UseVisualStyleBackColor = true;
             this.btn_doktor.Click += new System.EventHandler(this.btn_doktor_Click);
             // 
-            // Giris_Paneli
+            // Login_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,10 +131,12 @@
             this.Controls.Add(this.btn_hasta);
             this.Controls.Add(this.btn_sekreter);
             this.Controls.Add(this.btn_doktor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Giris_Paneli";
+            this.Name = "Login_Panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Giris Paneli";
+            this.Text = "Login Panel";
+            this.Load += new System.EventHandler(this.Login_Panel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

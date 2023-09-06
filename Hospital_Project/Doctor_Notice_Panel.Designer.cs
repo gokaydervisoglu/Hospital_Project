@@ -44,7 +44,7 @@
             this.groupBox1.Size = new System.Drawing.Size(776, 341);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Duyurular";
+            this.groupBox1.Text = "Information";
             // 
             // dataGridView1
             // 
@@ -59,15 +59,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(770, 322);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Doktor_Duyuru_Paneli
+            // Doctor_Notice_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 360);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Doktor_Duyuru_Paneli";
-            this.Text = "Doktor_Duyuru_Paneli";
+            this.Name = "Doctor_Notice_Panel";
+            this.Text = "Doctor Information Panel";
             this.Load += new System.EventHandler(this.Doktor_Duyuru_Paneli_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

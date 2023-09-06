@@ -62,11 +62,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(88, 122);
+            this.label1.Location = new System.Drawing.Point(46, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 28);
+            this.label1.Size = new System.Drawing.Size(140, 28);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Hasta Ad:";
+            this.label1.Text = "Patient Name:";
             // 
             // ad_txt
             // 
@@ -89,22 +89,22 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(58, 154);
+            this.label2.Location = new System.Drawing.Point(20, 151);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 28);
+            this.label2.Size = new System.Drawing.Size(167, 28);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Hasta Soyad:";
+            this.label2.Text = "Patient Surname:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(24, 188);
+            this.label3.Location = new System.Drawing.Point(81, 187);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 28);
+            this.label3.Size = new System.Drawing.Size(106, 28);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Hasta Kimlik No:";
+            this.label3.Text = "Patient ID:";
             // 
             // tc_txt
             // 
@@ -120,22 +120,22 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(46, 220);
+            this.label4.Location = new System.Drawing.Point(42, 221);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 28);
+            this.label4.Size = new System.Drawing.Size(145, 28);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Hasta Telefon:";
+            this.label4.Text = "Patient Phone:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(42, 253);
+            this.label5.Location = new System.Drawing.Point(69, 253);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 28);
+            this.label5.Size = new System.Drawing.Size(118, 28);
             this.label5.TabIndex = 17;
-            this.label5.Text = "Hasta Cinsiyet:";
+            this.label5.Text = "Patient Sex:";
             // 
             // cinsiyet_txt
             // 
@@ -163,11 +163,11 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(129, 302);
+            this.label6.Location = new System.Drawing.Point(85, 300);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 28);
+            this.label6.Size = new System.Drawing.Size(102, 28);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Şifre:";
+            this.label6.Text = "Password:";
             // 
             // sifre_txt
             // 
@@ -185,7 +185,7 @@
             this.btn_kayit.Name = "btn_kayit";
             this.btn_kayit.Size = new System.Drawing.Size(125, 26);
             this.btn_kayit.TabIndex = 7;
-            this.btn_kayit.Text = "Kayit Ol";
+            this.btn_kayit.Text = "Register";
             this.btn_kayit.UseVisualStyleBackColor = true;
             this.btn_kayit.Click += new System.EventHandler(this.btn_kayit_Click_1);
             // 
@@ -197,11 +197,11 @@
             this.btn_geri.Name = "btn_geri";
             this.btn_geri.Size = new System.Drawing.Size(58, 28);
             this.btn_geri.TabIndex = 8;
-            this.btn_geri.Text = "Geri";
+            this.btn_geri.Text = "Return";
             this.btn_geri.UseVisualStyleBackColor = true;
             this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click_1);
             // 
-            // Hasta_Kayit_Paneli
+            // Patient_Registration_Panel
             // 
             this.AcceptButton = this.btn_kayit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,10 +223,11 @@
             this.Controls.Add(this.ad_txt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Hasta_Kayit_Paneli";
+            this.Name = "Patient_Registration_Panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hasta_Kayit_Paneli";
+            this.Text = "Patient Register Panel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hasta_Kayit_Paneli_FormClosing_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

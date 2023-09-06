@@ -86,5 +86,10 @@ namespace Hospital_Project
         {
             this.Close();
         }
+
+        private void Login_Panel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
