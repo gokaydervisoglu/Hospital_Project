@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_geri = new System.Windows.Forms.Button();
-            this.btn_guncelle = new System.Windows.Forms.Button();
-            this.sifre_txt = new System.Windows.Forms.TextBox();
-            this.tel_txt = new System.Windows.Forms.MaskedTextBox();
-            this.cinsiyet_txt = new System.Windows.Forms.ComboBox();
+            this.btn_rtn = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.password_txt = new System.Windows.Forms.TextBox();
+            this.phone_txt = new System.Windows.Forms.MaskedTextBox();
+            this.sex_txt = new System.Windows.Forms.ComboBox();
             this.tc_txt = new System.Windows.Forms.MaskedTextBox();
-            this.soyad_txt = new System.Windows.Forms.TextBox();
-            this.ad_txt = new System.Windows.Forms.TextBox();
+            this.surname_txt = new System.Windows.Forms.TextBox();
+            this.name_txt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,58 +46,58 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_geri
+            // btn_rtn
             // 
-            this.btn_geri.Font = new System.Drawing.Font("Calibri Light", 7.8F);
-            this.btn_geri.Location = new System.Drawing.Point(3, 354);
-            this.btn_geri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_geri.Name = "btn_geri";
-            this.btn_geri.Size = new System.Drawing.Size(75, 23);
-            this.btn_geri.TabIndex = 8;
-            this.btn_geri.Text = "Return";
-            this.btn_geri.UseVisualStyleBackColor = true;
-            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
+            this.btn_rtn.Font = new System.Drawing.Font("Calibri Light", 7.8F);
+            this.btn_rtn.Location = new System.Drawing.Point(3, 354);
+            this.btn_rtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_rtn.Name = "btn_rtn";
+            this.btn_rtn.Size = new System.Drawing.Size(75, 23);
+            this.btn_rtn.TabIndex = 8;
+            this.btn_rtn.Text = "Return";
+            this.btn_rtn.UseVisualStyleBackColor = true;
+            this.btn_rtn.Click += new System.EventHandler(this.btn_geri_Click);
             // 
-            // btn_guncelle
+            // btn_update
             // 
-            this.btn_guncelle.Font = new System.Drawing.Font("Calibri Light", 9F);
-            this.btn_guncelle.Location = new System.Drawing.Point(191, 330);
-            this.btn_guncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_guncelle.Name = "btn_guncelle";
-            this.btn_guncelle.Size = new System.Drawing.Size(125, 23);
-            this.btn_guncelle.TabIndex = 7;
-            this.btn_guncelle.Text = "Update";
-            this.btn_guncelle.UseVisualStyleBackColor = true;
-            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
+            this.btn_update.Font = new System.Drawing.Font("Calibri Light", 9F);
+            this.btn_update.Location = new System.Drawing.Point(191, 330);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(125, 23);
+            this.btn_update.TabIndex = 7;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
-            // sifre_txt
+            // password_txt
             // 
-            this.sifre_txt.Location = new System.Drawing.Point(191, 303);
-            this.sifre_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.sifre_txt.Name = "sifre_txt";
-            this.sifre_txt.Size = new System.Drawing.Size(125, 22);
-            this.sifre_txt.TabIndex = 6;
+            this.password_txt.Location = new System.Drawing.Point(191, 303);
+            this.password_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.password_txt.Name = "password_txt";
+            this.password_txt.Size = new System.Drawing.Size(125, 22);
+            this.password_txt.TabIndex = 6;
             // 
-            // tel_txt
+            // phone_txt
             // 
-            this.tel_txt.Location = new System.Drawing.Point(191, 220);
-            this.tel_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tel_txt.Mask = "(999) 000-0000";
-            this.tel_txt.Name = "tel_txt";
-            this.tel_txt.Size = new System.Drawing.Size(125, 22);
-            this.tel_txt.TabIndex = 4;
+            this.phone_txt.Location = new System.Drawing.Point(191, 220);
+            this.phone_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.phone_txt.Mask = "(999) 000-0000";
+            this.phone_txt.Name = "phone_txt";
+            this.phone_txt.Size = new System.Drawing.Size(125, 22);
+            this.phone_txt.TabIndex = 4;
             // 
-            // cinsiyet_txt
+            // sex_txt
             // 
-            this.cinsiyet_txt.FormattingEnabled = true;
-            this.cinsiyet_txt.Items.AddRange(new object[] {
+            this.sex_txt.FormattingEnabled = true;
+            this.sex_txt.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.cinsiyet_txt.Location = new System.Drawing.Point(191, 253);
-            this.cinsiyet_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cinsiyet_txt.Name = "cinsiyet_txt";
-            this.cinsiyet_txt.Size = new System.Drawing.Size(125, 24);
-            this.cinsiyet_txt.TabIndex = 5;
+            this.sex_txt.Location = new System.Drawing.Point(191, 253);
+            this.sex_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sex_txt.Name = "sex_txt";
+            this.sex_txt.Size = new System.Drawing.Size(125, 24);
+            this.sex_txt.TabIndex = 5;
             // 
             // tc_txt
             // 
@@ -109,21 +109,21 @@
             this.tc_txt.Size = new System.Drawing.Size(125, 22);
             this.tc_txt.TabIndex = 3;
             // 
-            // soyad_txt
+            // surname_txt
             // 
-            this.soyad_txt.Location = new System.Drawing.Point(191, 155);
-            this.soyad_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.soyad_txt.Name = "soyad_txt";
-            this.soyad_txt.Size = new System.Drawing.Size(125, 22);
-            this.soyad_txt.TabIndex = 2;
+            this.surname_txt.Location = new System.Drawing.Point(191, 155);
+            this.surname_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.surname_txt.Name = "surname_txt";
+            this.surname_txt.Size = new System.Drawing.Size(125, 22);
+            this.surname_txt.TabIndex = 2;
             // 
-            // ad_txt
+            // name_txt
             // 
-            this.ad_txt.Location = new System.Drawing.Point(191, 122);
-            this.ad_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ad_txt.Name = "ad_txt";
-            this.ad_txt.Size = new System.Drawing.Size(125, 22);
-            this.ad_txt.TabIndex = 1;
+            this.name_txt.Location = new System.Drawing.Point(191, 122);
+            this.name_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.name_txt.Name = "name_txt";
+            this.name_txt.Size = new System.Drawing.Size(125, 22);
+            this.name_txt.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -214,14 +214,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_geri);
-            this.Controls.Add(this.btn_guncelle);
-            this.Controls.Add(this.sifre_txt);
-            this.Controls.Add(this.tel_txt);
-            this.Controls.Add(this.cinsiyet_txt);
+            this.Controls.Add(this.btn_rtn);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.password_txt);
+            this.Controls.Add(this.phone_txt);
+            this.Controls.Add(this.sex_txt);
             this.Controls.Add(this.tc_txt);
-            this.Controls.Add(this.soyad_txt);
-            this.Controls.Add(this.ad_txt);
+            this.Controls.Add(this.surname_txt);
+            this.Controls.Add(this.name_txt);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -238,14 +238,14 @@
 
         #endregion
 
-        private Button btn_geri;
-        private Button btn_guncelle;
-        private TextBox sifre_txt;
-        private MaskedTextBox tel_txt;
-        private ComboBox cinsiyet_txt;
+        private Button btn_rtn;
+        private Button btn_update;
+        private TextBox password_txt;
+        private MaskedTextBox phone_txt;
+        private ComboBox sex_txt;
         private MaskedTextBox tc_txt;
-        private TextBox soyad_txt;
-        private TextBox ad_txt;
+        private TextBox surname_txt;
+        private TextBox name_txt;
         private PictureBox pictureBox1;
         private Label label6;
         private Label label5;

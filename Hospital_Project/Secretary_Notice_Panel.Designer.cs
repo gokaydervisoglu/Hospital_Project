@@ -30,14 +30,14 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.doktor_duyuru_txt = new System.Windows.Forms.RadioButton();
-            this.hasta_duyuru_txt = new System.Windows.Forms.RadioButton();
+            this.doctor_btn = new System.Windows.Forms.RadioButton();
+            this.patient_btn = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.sifre_kurtar_btn = new System.Windows.Forms.Button();
+            this.btn_helper = new System.Windows.Forms.Button();
             this.mail_txt = new System.Windows.Forms.TextBox();
-            this.sifre_txt = new System.Windows.Forms.TextBox();
+            this.password_txt = new System.Windows.Forms.TextBox();
             this.tc_txt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,28 +71,28 @@
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
-            // doktor_duyuru_txt
+            // doctor_btn
             // 
-            this.doktor_duyuru_txt.AutoSize = true;
-            this.doktor_duyuru_txt.Location = new System.Drawing.Point(520, 364);
-            this.doktor_duyuru_txt.Name = "doktor_duyuru_txt";
-            this.doktor_duyuru_txt.Size = new System.Drawing.Size(92, 20);
-            this.doktor_duyuru_txt.TabIndex = 2;
-            this.doktor_duyuru_txt.TabStop = true;
-            this.doktor_duyuru_txt.Text = "Doctor Info";
-            this.doktor_duyuru_txt.UseVisualStyleBackColor = true;
+            this.doctor_btn.AutoSize = true;
+            this.doctor_btn.Location = new System.Drawing.Point(520, 364);
+            this.doctor_btn.Name = "doctor_btn";
+            this.doctor_btn.Size = new System.Drawing.Size(92, 20);
+            this.doctor_btn.TabIndex = 2;
+            this.doctor_btn.TabStop = true;
+            this.doctor_btn.Text = "Doctor Info";
+            this.doctor_btn.UseVisualStyleBackColor = true;
             // 
-            // hasta_duyuru_txt
+            // patient_btn
             // 
-            this.hasta_duyuru_txt.AutoSize = true;
-            this.hasta_duyuru_txt.Location = new System.Drawing.Point(366, 364);
-            this.hasta_duyuru_txt.Name = "hasta_duyuru_txt";
-            this.hasta_duyuru_txt.Size = new System.Drawing.Size(85, 20);
-            this.hasta_duyuru_txt.TabIndex = 3;
-            this.hasta_duyuru_txt.TabStop = true;
-            this.hasta_duyuru_txt.Text = "Patint Info";
-            this.hasta_duyuru_txt.UseVisualStyleBackColor = true;
-            this.hasta_duyuru_txt.CheckedChanged += new System.EventHandler(this.hasta_duyuru_txt_CheckedChanged);
+            this.patient_btn.AutoSize = true;
+            this.patient_btn.Location = new System.Drawing.Point(366, 364);
+            this.patient_btn.Name = "patient_btn";
+            this.patient_btn.Size = new System.Drawing.Size(93, 20);
+            this.patient_btn.TabIndex = 3;
+            this.patient_btn.TabStop = true;
+            this.patient_btn.Text = "Patient İnfo";
+            this.patient_btn.UseVisualStyleBackColor = true;
+            this.patient_btn.CheckedChanged += new System.EventHandler(this.hasta_duyuru_txt_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -117,9 +117,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.sifre_kurtar_btn);
+            this.groupBox3.Controls.Add(this.btn_helper);
             this.groupBox3.Controls.Add(this.mail_txt);
-            this.groupBox3.Controls.Add(this.sifre_txt);
+            this.groupBox3.Controls.Add(this.password_txt);
             this.groupBox3.Controls.Add(this.tc_txt);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
@@ -131,15 +131,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fast access";
             // 
-            // sifre_kurtar_btn
+            // btn_helper
             // 
-            this.sifre_kurtar_btn.Location = new System.Drawing.Point(75, 115);
-            this.sifre_kurtar_btn.Name = "sifre_kurtar_btn";
-            this.sifre_kurtar_btn.Size = new System.Drawing.Size(120, 23);
-            this.sifre_kurtar_btn.TabIndex = 6;
-            this.sifre_kurtar_btn.Text = "Help Password";
-            this.sifre_kurtar_btn.UseVisualStyleBackColor = true;
-            this.sifre_kurtar_btn.Click += new System.EventHandler(this.button1_Click);
+            this.btn_helper.Location = new System.Drawing.Point(75, 115);
+            this.btn_helper.Name = "btn_helper";
+            this.btn_helper.Size = new System.Drawing.Size(120, 23);
+            this.btn_helper.TabIndex = 6;
+            this.btn_helper.Text = "Help Password";
+            this.btn_helper.UseVisualStyleBackColor = true;
+            this.btn_helper.Click += new System.EventHandler(this.button1_Click);
             // 
             // mail_txt
             // 
@@ -148,12 +148,12 @@
             this.mail_txt.Size = new System.Drawing.Size(165, 22);
             this.mail_txt.TabIndex = 5;
             // 
-            // sifre_txt
+            // password_txt
             // 
-            this.sifre_txt.Location = new System.Drawing.Point(112, 55);
-            this.sifre_txt.Name = "sifre_txt";
-            this.sifre_txt.Size = new System.Drawing.Size(165, 22);
-            this.sifre_txt.TabIndex = 4;
+            this.password_txt.Location = new System.Drawing.Point(112, 55);
+            this.password_txt.Name = "password_txt";
+            this.password_txt.Size = new System.Drawing.Size(165, 22);
+            this.password_txt.TabIndex = 4;
             // 
             // tc_txt
             // 
@@ -202,8 +202,8 @@
             this.ClientSize = new System.Drawing.Size(723, 388);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.hasta_duyuru_txt);
-            this.Controls.Add(this.doktor_duyuru_txt);
+            this.Controls.Add(this.patient_btn);
+            this.Controls.Add(this.doctor_btn);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Secretary_Notice_Panel";
@@ -223,8 +223,8 @@
         #endregion
         private GroupBox groupBox2;
         private DataGridView dataGridView2;
-        private RadioButton doktor_duyuru_txt;
-        private RadioButton hasta_duyuru_txt;
+        private RadioButton doctor_btn;
+        private RadioButton patient_btn;
         private GroupBox groupBox1;
         private DataGridView dataGridView1;
         private GroupBox groupBox3;
@@ -232,8 +232,8 @@
         private Label label2;
         private Label label1;
         private TextBox mail_txt;
-        private TextBox sifre_txt;
+        private TextBox password_txt;
         private TextBox tc_txt;
-        private Button sifre_kurtar_btn;
+        private Button btn_helper;
     }
 }

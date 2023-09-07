@@ -129,8 +129,8 @@
             this.Name = "Doctor_Login_Panel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doctor Login Panel";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Doktor_Giris_Paneli_FormClosing_1);
-            this.Load += new System.EventHandler(this.Doktor_Giris_Paneli_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Doctor_Login_Panel_FormClosing);
+            this.Load += new System.EventHandler(this.Doctor_Login_Panel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -33,7 +33,7 @@ namespace Hospital_Project
         Sql_Baglanti sql = new Sql_Baglanti();
         private void Sekreter_Bilgi_Paneli_Load(object sender, EventArgs e)
         {
-            //Ad ve Soyad Cekme
+            // Get Name and Surname
             SqlCommand cmd = new SqlCommand("Select SekreterAd,SekreterSoyad From Tbl_Sekreter where SekreterTC=@p1", sql.baglanti());
 
             cmd.Parameters.AddWithValue("@p1", tc);
@@ -44,12 +44,12 @@ namespace Hospital_Project
 
             while (reader.Read())
             {
-                ad_txt.Text = reader[0].ToString();
-                soyad_txt.Text = reader[1].ToString();
+                name_txt.Text = reader[0].ToString();
+                surname_txt.Text = reader[1].ToString();
                 sql.baglanti().Close();
             }
 
-            //Branslar Cekme
+            // Get Branches
             DataTable dt = new DataTable();
             SqlCommand cmd2 = new SqlCommand("Select BransAd from Tbl_Brans", sql.baglanti());
 
@@ -60,7 +60,7 @@ namespace Hospital_Project
             dataGridView1.DataSource = dt;
             sql.baglanti().Close();
 
-            //Doktorlar Cekme
+            // Get Doctors
             DataTable dt3 = new DataTable();
             SqlCommand cmd3 = new SqlCommand("Select (DoktorAd+' '+DoktorSoyad) as 'Doktorlar',DoktorBrans from Tbl_Doktorlar", sql.baglanti());
 
@@ -71,16 +71,16 @@ namespace Hospital_Project
             dataGridView2.DataSource = dt3;
             sql.baglanti().Close();
 
-            //Randevu Brans Aktarma
+            // Appointment Branch Transfer
             SqlCommand cmd4 = new SqlCommand("Select BransAd from Tbl_Brans", sql.baglanti());
 
-            brans_txt.Items.Clear();
+            branch_txt.Items.Clear();
 
             SqlDataReader reader4 = cmd4.ExecuteReader();
 
             while (reader4.Read())
             {
-                brans_txt.Items.Add(reader4[0].ToString());
+                branch_txt.Items.Add(reader4[0].ToString());
                 sql.baglanti().Close();
             }
 
@@ -97,22 +97,22 @@ namespace Hospital_Project
         private void randevu_kaydet_btn_Click(object sender, EventArgs e)
         {
 
-            if (tarih_txt.Text == "" || zaman_txt.Text == "" || brans_txt.Text == ""|| doktor_txt.Text == "")
+            if (date_txt.Text == "" || time_txt.Text == "" || branch_txt.Text == ""|| doctor_txt.Text == "")
             {
-                MessageBox.Show("Lutfen bilgileri eksiksiz giriniz");
+                MessageBox.Show("Please enter complete information");
             }
             else 
             {
                 //Randevu Olusturma
                 SqlCommand cmd3 = new SqlCommand("insert into Tbl_Randevu (RandevuTarih,RandevuSaat,RandevuBrans,RandevuDoktor) values (@p1,@p2,@p3,@p4)", sql.baglanti());
-                cmd3.Parameters.AddWithValue("@p1", tarih_txt.Text);
-                cmd3.Parameters.AddWithValue("@p2", zaman_txt.Text);
-                cmd3.Parameters.AddWithValue("@p3", brans_txt.Text);
-                cmd3.Parameters.AddWithValue("@p4", doktor_txt.Text);
+                cmd3.Parameters.AddWithValue("@p1", date_txt.Text);
+                cmd3.Parameters.AddWithValue("@p2", time_txt.Text);
+                cmd3.Parameters.AddWithValue("@p3", branch_txt.Text);
+                cmd3.Parameters.AddWithValue("@p4", doctor_txt.Text);
                 cmd3.ExecuteNonQuery();
 
                 sql.baglanti().Close();
-                MessageBox.Show("Randevu Olusturuldu!");
+                MessageBox.Show("Appointment Created!");
             }
 
 
@@ -120,15 +120,15 @@ namespace Hospital_Project
 
         private void guncelle_btn_CheckedChanged(object sender, EventArgs e)
         {
-            if (guncelle_btn.Checked == true)
+            if (btn_updatemode.Checked == true)
             {
                 id_txt.Enabled = true;
-                kimlikno_txt.Enabled = true;
+                idno_txt.Enabled = true;
             }
             else 
             {
                 id_txt.Enabled = false;
-                kimlikno_txt.Enabled = false;
+                idno_txt.Enabled = false;
             }
         }
 
@@ -137,15 +137,15 @@ namespace Hospital_Project
             //Doktor Cekme
             SqlCommand cmd3 = new SqlCommand("Select DoktorAd from Tbl_Doktorlar where DoktorBrans=@p1", sql.baglanti());
 
-            cmd3.Parameters.AddWithValue("@p1", brans_txt.Text);
+            cmd3.Parameters.AddWithValue("@p1", branch_txt.Text);
 
-            doktor_txt.Items.Clear();
+            doctor_txt.Items.Clear();
 
             SqlDataReader reader3 = cmd3.ExecuteReader();
 
             while (reader3.Read())
             {
-                doktor_txt.Items.Add(reader3[0].ToString());
+                doctor_txt.Items.Add(reader3[0].ToString());
             }
         }
 
@@ -153,24 +153,24 @@ namespace Hospital_Project
         {
             if (duyuru_txt.Text == "")
             {
-                MessageBox.Show("Lutfen duyuruyu giriniz!");
+                MessageBox.Show("Please enter the announcement!");
             }
             else
             {
-                //Duyuru Olusturma
+                // Creating Announcements
                 SqlCommand cmd = new SqlCommand("insert into Tbl_Duyuru (Duyuru) values (@p1)", sql.baglanti());
 
                 cmd.Parameters.AddWithValue("@p1", duyuru_txt.Text);
                 cmd.ExecuteNonQuery();
                 duyuru_txt.Clear();
-                MessageBox.Show("Duyuru Olusturuldu!");
+                MessageBox.Show("Announcement Created!");
 
             }
         }
 
         private void btn_doktorpnl_Click(object sender, EventArgs e)
         {
-            Doktor_Paneli fr = new Doktor_Paneli();
+            doctor_panel fr = new doctor_panel();
             fr.Show();
 
         }
@@ -198,22 +198,22 @@ namespace Hospital_Project
         {
             if (id_txt.Text == "" )
             {
-                MessageBox.Show("Lutfen ID bilgisini eksiksiz giriniz");
+                MessageBox.Show("Please enter the complete ID information.");
             }
             else
             {
-                //Randevu Guncelleme
+                // Appointment Update
                 SqlCommand cmd3 = new SqlCommand("update Tbl_Randevu Set RandevuTarih=@p1,RandevuSaat=@p2,RandevuBrans=@p3,RandevuDoktor=@p4,HastaTC=@p5 where RandevuID=@p7", sql.baglanti());
                 cmd3.Parameters.AddWithValue("@p7", id_txt.Text);
-                cmd3.Parameters.AddWithValue("@p1", tarih_txt.Text);
-                cmd3.Parameters.AddWithValue("@p2", zaman_txt.Text);
-                cmd3.Parameters.AddWithValue("@p3", brans_txt.Text);
-                cmd3.Parameters.AddWithValue("@p4", doktor_txt.Text);
+                cmd3.Parameters.AddWithValue("@p1", date_txt.Text);
+                cmd3.Parameters.AddWithValue("@p2", time_txt.Text);
+                cmd3.Parameters.AddWithValue("@p3", branch_txt.Text);
+                cmd3.Parameters.AddWithValue("@p4", doctor_txt.Text);
                 cmd3.Parameters.AddWithValue("@p5", tc_txt.Text);
 
                 string durum;
 
-                if(durum_btn.Checked)
+                if(status_btn.Checked)
                 {
                     durum = "True";
                 }
@@ -227,26 +227,26 @@ namespace Hospital_Project
                 cmd3.ExecuteNonQuery();
 
                 sql.baglanti().Close();
-                MessageBox.Show("Randevu Guncellendi!");
+                MessageBox.Show("Appointment Updated!");
             }
         }
 
         public void SetData(string id,string tarih,string saat,string brans,string doktor,string kimlik,bool durum)
         {
             id_txt.Text = id;
-            tarih_txt.Text = tarih;
-            zaman_txt.Text = saat;
-            brans_txt.Text = brans;
-            doktor_txt.Text = doktor;
-            kimlikno_txt.Text = kimlik;
-            durum_btn.Checked = durum;
+            date_txt.Text = tarih;
+            time_txt.Text = saat;
+            branch_txt.Text = brans;
+            doctor_txt.Text = doktor;
+            idno_txt.Text = kimlik;
+            status_btn.Checked = durum;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (id_txt.Text == "")
             {
-                MessageBox.Show("Lutfen ID bilgisini eksiksiz giriniz");
+                MessageBox.Show("Please enter the complete ID information.");
             }
             else
             {
@@ -256,7 +256,7 @@ namespace Hospital_Project
                 cmd3.ExecuteNonQuery();
 
                 sql.baglanti().Close();
-                MessageBox.Show("Randevu Silindi!");
+                MessageBox.Show("Appointment Deleted!");
             }
         }
 

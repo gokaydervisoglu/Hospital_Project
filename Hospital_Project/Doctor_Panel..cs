@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Hospital_Project
 {
-    public partial class Doktor_Paneli : Form
+    public partial class doctor_panel : Form
     {
-        public Doktor_Paneli()
+        public doctor_panel()
         {
             InitializeComponent();
         }
@@ -22,21 +22,21 @@ namespace Hospital_Project
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {  
-            if (ad_txt.Text == "" || soyad_txt.Text == "" || tc_txt.Text == "" || brans_txt.Text == "" || sifre_txt.Text == "")
+            if (name_txt.Text == "" || surname_txt.Text == "" || tc_txt.Text == "" || branch_txt.Text == "" || password_txt.Text == "")
             {
-                MessageBox.Show("Lutfen bilgileri ekiksiz giriniz");
+                MessageBox.Show("Please enter the information without attachments");
             }
             else {
                 SqlCommand cmd = new SqlCommand("insert into Tbl_Doktorlar (DoktorAd,DoktorSoyad,DoktorTC,DoktorBrans,DoktorSifre) values(@p1,@p2,@p3,@p4,@p5)", sql.baglanti());
-                cmd.Parameters.AddWithValue("@p1", ad_txt.Text);
-                cmd.Parameters.AddWithValue("@p2", soyad_txt.Text);
+                cmd.Parameters.AddWithValue("@p1", name_txt.Text);
+                cmd.Parameters.AddWithValue("@p2", surname_txt.Text);
                 cmd.Parameters.AddWithValue("@p3", tc_txt.Text);
-                cmd.Parameters.AddWithValue("@p4", brans_txt.Text);
-                cmd.Parameters.AddWithValue("@p5", sifre_txt.Text);
+                cmd.Parameters.AddWithValue("@p4", branch_txt.Text);
+                cmd.Parameters.AddWithValue("@p5", password_txt.Text);
                 cmd.ExecuteNonQuery();
 
                 sql.baglanti().Close();
-                MessageBox.Show("Başarılı Şekilde Eklendi");
+                MessageBox.Show("Added Successfully");
             }
         }
 
@@ -44,7 +44,7 @@ namespace Hospital_Project
         {
             if ( tc_txt.Text == "" )
             {
-                MessageBox.Show("Lutfen Kimlik No bilgisini ekiksiz giriniz");
+                MessageBox.Show("Please enter your Identity No");
             }
             else
             {
@@ -54,26 +54,26 @@ namespace Hospital_Project
                 cmd.ExecuteNonQuery();
 
                 sql.baglanti().Close();
-                MessageBox.Show("Başarılı Şekilde Silindi");
+                MessageBox.Show("Deleted Succesfully");
             }
         }
 
         private void Doktor_Paneli_Load(object sender, EventArgs e)
         {
-            //Randevu Brans Aktarma
+            // Appointment Branch Transfer
             SqlCommand cmd4 = new SqlCommand("Select BransAd from Tbl_Brans", sql.baglanti());
 
-            brans_txt.Items.Clear();
+            branch_txt.Items.Clear();
 
             SqlDataReader reader4 = cmd4.ExecuteReader();
 
             while (reader4.Read())
             {
-                brans_txt.Items.Add(reader4[0].ToString());
+                branch_txt.Items.Add(reader4[0].ToString());
                 sql.baglanti().Close();
             }
 
-            //Mevcut Doktorlar
+            // Current Doctors
             DataTable dt =  new DataTable();
 
             SqlDataAdapter sqldata = new SqlDataAdapter("Select * from Tbl_Doktorlar ", sql.baglanti());
@@ -84,22 +84,22 @@ namespace Hospital_Project
 
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
-            if (ad_txt.Text == "" || soyad_txt.Text == ""  || brans_txt.Text == "" || sifre_txt.Text == "")
+            if (name_txt.Text == "" || surname_txt.Text == ""  || branch_txt.Text == "" || password_txt.Text == "")
             {
-                MessageBox.Show("Lutfen bilgileri ekiksiz giriniz");
+                MessageBox.Show("Please enter the information without attachments");
             }
             else
             {
                 SqlCommand cmd = new SqlCommand("update Tbl_Doktorlar Set DoktorAd=@p1,DoktorSoyad=@p2,DoktorBrans=@4,DoktorSifre=@p5 where DoktorTC=@p3", sql.baglanti());
-                cmd.Parameters.AddWithValue("@p1", ad_txt.Text);
-                cmd.Parameters.AddWithValue("@p2", soyad_txt.Text);
+                cmd.Parameters.AddWithValue("@p1", name_txt.Text);
+                cmd.Parameters.AddWithValue("@p2", surname_txt.Text);
                 cmd.Parameters.AddWithValue("@p3", tc_txt.Text);
-                cmd.Parameters.AddWithValue("@p4", brans_txt.Text);
-                cmd.Parameters.AddWithValue("@p5", sifre_txt.Text);
+                cmd.Parameters.AddWithValue("@p4", branch_txt.Text);
+                cmd.Parameters.AddWithValue("@p5", password_txt.Text);
                 cmd.ExecuteNonQuery();
 
                 sql.baglanti().Close();
-                MessageBox.Show("Başarılı Şekilde Guncellendi");
+                MessageBox.Show("Successfully Updated");
             }
         }
     }

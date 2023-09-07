@@ -32,31 +32,31 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bilgiduzenle_label = new System.Windows.Forms.LinkLabel();
             this.tc_txt = new System.Windows.Forms.Label();
-            this.soyad_txt = new System.Windows.Forms.Label();
-            this.ad_txt = new System.Windows.Forms.Label();
+            this.surname_txt = new System.Windows.Forms.Label();
+            this.name_txt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_duyuru = new System.Windows.Forms.Button();
+            this.btn_notice = new System.Windows.Forms.Button();
             this.duyuru_txt = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_cikis = new System.Windows.Forms.Button();
-            this.btn_randevulst = new System.Windows.Forms.Button();
-            this.btn_branspnl = new System.Windows.Forms.Button();
-            this.btn_doktorpnl = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.btn_appolist = new System.Windows.Forms.Button();
+            this.btn_branchpanel = new System.Windows.Forms.Button();
+            this.btn_doctorpl = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btn_sil = new System.Windows.Forms.Button();
-            this.guncelle_btn = new System.Windows.Forms.CheckBox();
-            this.durum_btn = new System.Windows.Forms.CheckBox();
-            this.randevu_guncelle_btn = new System.Windows.Forms.Button();
-            this.randevu_kaydet_btn = new System.Windows.Forms.Button();
-            this.kimlikno_txt = new System.Windows.Forms.MaskedTextBox();
-            this.doktor_txt = new System.Windows.Forms.ComboBox();
-            this.brans_txt = new System.Windows.Forms.ComboBox();
-            this.zaman_txt = new System.Windows.Forms.MaskedTextBox();
-            this.tarih_txt = new System.Windows.Forms.MaskedTextBox();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_updatemode = new System.Windows.Forms.CheckBox();
+            this.status_btn = new System.Windows.Forms.CheckBox();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.idno_txt = new System.Windows.Forms.MaskedTextBox();
+            this.doctor_txt = new System.Windows.Forms.ComboBox();
+            this.branch_txt = new System.Windows.Forms.ComboBox();
+            this.time_txt = new System.Windows.Forms.MaskedTextBox();
+            this.date_txt = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btn_geri = new System.Windows.Forms.Button();
+            this.btn_rtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,8 +86,8 @@
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.bilgiduzenle_label);
             this.groupBox1.Controls.Add(this.tc_txt);
-            this.groupBox1.Controls.Add(this.soyad_txt);
-            this.groupBox1.Controls.Add(this.ad_txt);
+            this.groupBox1.Controls.Add(this.surname_txt);
+            this.groupBox1.Controls.Add(this.name_txt);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -134,25 +134,25 @@
             this.tc_txt.TabIndex = 14;
             this.tc_txt.Text = "00000000000";
             // 
-            // soyad_txt
+            // surname_txt
             // 
-            this.soyad_txt.AutoSize = true;
-            this.soyad_txt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.soyad_txt.Location = new System.Drawing.Point(272, 47);
-            this.soyad_txt.Name = "soyad_txt";
-            this.soyad_txt.Size = new System.Drawing.Size(38, 21);
-            this.soyad_txt.TabIndex = 13;
-            this.soyad_txt.Text = "Null";
+            this.surname_txt.AutoSize = true;
+            this.surname_txt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.surname_txt.Location = new System.Drawing.Point(272, 47);
+            this.surname_txt.Name = "surname_txt";
+            this.surname_txt.Size = new System.Drawing.Size(38, 21);
+            this.surname_txt.TabIndex = 13;
+            this.surname_txt.Text = "Null";
             // 
-            // ad_txt
+            // name_txt
             // 
-            this.ad_txt.AutoSize = true;
-            this.ad_txt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.ad_txt.Location = new System.Drawing.Point(272, 21);
-            this.ad_txt.Name = "ad_txt";
-            this.ad_txt.Size = new System.Drawing.Size(38, 21);
-            this.ad_txt.TabIndex = 12;
-            this.ad_txt.Text = "Null";
+            this.name_txt.AutoSize = true;
+            this.name_txt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.name_txt.Location = new System.Drawing.Point(272, 21);
+            this.name_txt.Name = "name_txt";
+            this.name_txt.Size = new System.Drawing.Size(38, 21);
+            this.name_txt.TabIndex = 12;
+            this.name_txt.Text = "Null";
             // 
             // label3
             // 
@@ -200,7 +200,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btn_duyuru);
+            this.groupBox2.Controls.Add(this.btn_notice);
             this.groupBox2.Controls.Add(this.duyuru_txt);
             this.groupBox2.Location = new System.Drawing.Point(12, 141);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -211,17 +211,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Creating Announcements";
             // 
-            // btn_duyuru
+            // btn_notice
             // 
-            this.btn_duyuru.Font = new System.Drawing.Font("Calibri Light", 9F);
-            this.btn_duyuru.Location = new System.Drawing.Point(6, 110);
-            this.btn_duyuru.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_duyuru.Name = "btn_duyuru";
-            this.btn_duyuru.Size = new System.Drawing.Size(337, 23);
-            this.btn_duyuru.TabIndex = 1;
-            this.btn_duyuru.Text = "Create";
-            this.btn_duyuru.UseVisualStyleBackColor = true;
-            this.btn_duyuru.Click += new System.EventHandler(this.btn_duyuru_Click);
+            this.btn_notice.Font = new System.Drawing.Font("Calibri Light", 9F);
+            this.btn_notice.Location = new System.Drawing.Point(6, 110);
+            this.btn_notice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_notice.Name = "btn_notice";
+            this.btn_notice.Size = new System.Drawing.Size(337, 23);
+            this.btn_notice.TabIndex = 1;
+            this.btn_notice.Text = "Create";
+            this.btn_notice.UseVisualStyleBackColor = true;
+            this.btn_notice.Click += new System.EventHandler(this.btn_duyuru_Click);
             // 
             // duyuru_txt
             // 
@@ -234,10 +234,10 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btn_cikis);
-            this.groupBox3.Controls.Add(this.btn_randevulst);
-            this.groupBox3.Controls.Add(this.btn_branspnl);
-            this.groupBox3.Controls.Add(this.btn_doktorpnl);
+            this.groupBox3.Controls.Add(this.btn_exit);
+            this.groupBox3.Controls.Add(this.btn_appolist);
+            this.groupBox3.Controls.Add(this.btn_branchpanel);
+            this.groupBox3.Controls.Add(this.btn_doctorpl);
             this.groupBox3.Location = new System.Drawing.Point(12, 288);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
@@ -247,61 +247,61 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fast access";
             // 
-            // btn_cikis
+            // btn_exit
             // 
-            this.btn_cikis.Location = new System.Drawing.Point(177, 56);
-            this.btn_cikis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_cikis.Name = "btn_cikis";
-            this.btn_cikis.Size = new System.Drawing.Size(165, 23);
-            this.btn_cikis.TabIndex = 3;
-            this.btn_cikis.Text = "Exit";
-            this.btn_cikis.UseVisualStyleBackColor = true;
+            this.btn_exit.Location = new System.Drawing.Point(177, 56);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(165, 23);
+            this.btn_exit.TabIndex = 3;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = true;
             // 
-            // btn_randevulst
+            // btn_appolist
             // 
-            this.btn_randevulst.Location = new System.Drawing.Point(6, 56);
-            this.btn_randevulst.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_randevulst.Name = "btn_randevulst";
-            this.btn_randevulst.Size = new System.Drawing.Size(165, 23);
-            this.btn_randevulst.TabIndex = 2;
-            this.btn_randevulst.Text = "Appointment List";
-            this.btn_randevulst.UseVisualStyleBackColor = true;
-            this.btn_randevulst.Click += new System.EventHandler(this.btn_randevulst_Click);
+            this.btn_appolist.Location = new System.Drawing.Point(6, 56);
+            this.btn_appolist.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_appolist.Name = "btn_appolist";
+            this.btn_appolist.Size = new System.Drawing.Size(165, 23);
+            this.btn_appolist.TabIndex = 2;
+            this.btn_appolist.Text = "Appointment List";
+            this.btn_appolist.UseVisualStyleBackColor = true;
+            this.btn_appolist.Click += new System.EventHandler(this.btn_randevulst_Click);
             // 
-            // btn_branspnl
+            // btn_branchpanel
             // 
-            this.btn_branspnl.Location = new System.Drawing.Point(177, 28);
-            this.btn_branspnl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_branspnl.Name = "btn_branspnl";
-            this.btn_branspnl.Size = new System.Drawing.Size(165, 23);
-            this.btn_branspnl.TabIndex = 1;
-            this.btn_branspnl.Text = "Branch Panel";
-            this.btn_branspnl.UseVisualStyleBackColor = true;
-            this.btn_branspnl.Click += new System.EventHandler(this.btn_branspnl_Click);
+            this.btn_branchpanel.Location = new System.Drawing.Point(177, 28);
+            this.btn_branchpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_branchpanel.Name = "btn_branchpanel";
+            this.btn_branchpanel.Size = new System.Drawing.Size(165, 23);
+            this.btn_branchpanel.TabIndex = 1;
+            this.btn_branchpanel.Text = "Branch Panel";
+            this.btn_branchpanel.UseVisualStyleBackColor = true;
+            this.btn_branchpanel.Click += new System.EventHandler(this.btn_branspnl_Click);
             // 
-            // btn_doktorpnl
+            // btn_doctorpl
             // 
-            this.btn_doktorpnl.Location = new System.Drawing.Point(6, 28);
-            this.btn_doktorpnl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_doktorpnl.Name = "btn_doktorpnl";
-            this.btn_doktorpnl.Size = new System.Drawing.Size(165, 23);
-            this.btn_doktorpnl.TabIndex = 0;
-            this.btn_doktorpnl.Text = "Doctor Panel";
-            this.btn_doktorpnl.UseVisualStyleBackColor = true;
-            this.btn_doktorpnl.Click += new System.EventHandler(this.btn_doktorpnl_Click);
+            this.btn_doctorpl.Location = new System.Drawing.Point(6, 28);
+            this.btn_doctorpl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_doctorpl.Name = "btn_doctorpl";
+            this.btn_doctorpl.Size = new System.Drawing.Size(165, 23);
+            this.btn_doctorpl.TabIndex = 0;
+            this.btn_doctorpl.Text = "Doctor Panel";
+            this.btn_doctorpl.UseVisualStyleBackColor = true;
+            this.btn_doctorpl.Click += new System.EventHandler(this.btn_doktorpnl_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.btn_sil);
-            this.groupBox4.Controls.Add(this.guncelle_btn);
-            this.groupBox4.Controls.Add(this.durum_btn);
-            this.groupBox4.Controls.Add(this.randevu_guncelle_btn);
-            this.groupBox4.Controls.Add(this.randevu_kaydet_btn);
-            this.groupBox4.Controls.Add(this.kimlikno_txt);
-            this.groupBox4.Controls.Add(this.doktor_txt);
-            this.groupBox4.Controls.Add(this.brans_txt);
-            this.groupBox4.Controls.Add(this.zaman_txt);
-            this.groupBox4.Controls.Add(this.tarih_txt);
+            this.groupBox4.Controls.Add(this.btn_delete);
+            this.groupBox4.Controls.Add(this.btn_updatemode);
+            this.groupBox4.Controls.Add(this.status_btn);
+            this.groupBox4.Controls.Add(this.btn_update);
+            this.groupBox4.Controls.Add(this.btn_save);
+            this.groupBox4.Controls.Add(this.idno_txt);
+            this.groupBox4.Controls.Add(this.doctor_txt);
+            this.groupBox4.Controls.Add(this.branch_txt);
+            this.groupBox4.Controls.Add(this.time_txt);
+            this.groupBox4.Controls.Add(this.date_txt);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label7);
@@ -318,109 +318,109 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Appointment Panel";
             // 
-            // btn_sil
+            // btn_delete
             // 
-            this.btn_sil.Location = new System.Drawing.Point(159, 309);
-            this.btn_sil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(125, 23);
-            this.btn_sil.TabIndex = 33;
-            this.btn_sil.Text = "Delete";
-            this.btn_sil.UseVisualStyleBackColor = true;
-            this.btn_sil.Click += new System.EventHandler(this.button1_Click);
+            this.btn_delete.Location = new System.Drawing.Point(159, 309);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(125, 23);
+            this.btn_delete.TabIndex = 33;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.button1_Click);
             // 
-            // guncelle_btn
+            // btn_updatemode
             // 
-            this.guncelle_btn.AutoSize = true;
-            this.guncelle_btn.ForeColor = System.Drawing.Color.IndianRed;
-            this.guncelle_btn.Location = new System.Drawing.Point(87, 280);
-            this.guncelle_btn.Name = "guncelle_btn";
-            this.guncelle_btn.Size = new System.Drawing.Size(112, 20);
-            this.guncelle_btn.TabIndex = 32;
-            this.guncelle_btn.Text = "Update Mode";
-            this.guncelle_btn.UseVisualStyleBackColor = true;
-            this.guncelle_btn.CheckedChanged += new System.EventHandler(this.guncelle_btn_CheckedChanged);
+            this.btn_updatemode.AutoSize = true;
+            this.btn_updatemode.ForeColor = System.Drawing.Color.IndianRed;
+            this.btn_updatemode.Location = new System.Drawing.Point(87, 280);
+            this.btn_updatemode.Name = "btn_updatemode";
+            this.btn_updatemode.Size = new System.Drawing.Size(112, 20);
+            this.btn_updatemode.TabIndex = 32;
+            this.btn_updatemode.Text = "Update Mode";
+            this.btn_updatemode.UseVisualStyleBackColor = true;
+            this.btn_updatemode.CheckedChanged += new System.EventHandler(this.guncelle_btn_CheckedChanged);
             // 
-            // durum_btn
+            // status_btn
             // 
-            this.durum_btn.AutoSize = true;
-            this.durum_btn.Location = new System.Drawing.Point(103, 220);
-            this.durum_btn.Name = "durum_btn";
-            this.durum_btn.Size = new System.Drawing.Size(66, 20);
-            this.durum_btn.TabIndex = 31;
-            this.durum_btn.Text = "Status";
-            this.durum_btn.UseVisualStyleBackColor = true;
+            this.status_btn.AutoSize = true;
+            this.status_btn.Location = new System.Drawing.Point(103, 220);
+            this.status_btn.Name = "status_btn";
+            this.status_btn.Size = new System.Drawing.Size(66, 20);
+            this.status_btn.TabIndex = 31;
+            this.status_btn.Text = "Status";
+            this.status_btn.UseVisualStyleBackColor = true;
             // 
-            // randevu_guncelle_btn
+            // btn_update
             // 
-            this.randevu_guncelle_btn.Location = new System.Drawing.Point(87, 336);
-            this.randevu_guncelle_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.randevu_guncelle_btn.Name = "randevu_guncelle_btn";
-            this.randevu_guncelle_btn.Size = new System.Drawing.Size(125, 23);
-            this.randevu_guncelle_btn.TabIndex = 30;
-            this.randevu_guncelle_btn.Text = "Update";
-            this.randevu_guncelle_btn.UseVisualStyleBackColor = true;
-            this.randevu_guncelle_btn.Click += new System.EventHandler(this.randevu_guncelle_btn_Click);
+            this.btn_update.Location = new System.Drawing.Point(87, 336);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(125, 23);
+            this.btn_update.TabIndex = 30;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.randevu_guncelle_btn_Click);
             // 
-            // randevu_kaydet_btn
+            // btn_save
             // 
-            this.randevu_kaydet_btn.Location = new System.Drawing.Point(28, 309);
-            this.randevu_kaydet_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.randevu_kaydet_btn.Name = "randevu_kaydet_btn";
-            this.randevu_kaydet_btn.Size = new System.Drawing.Size(125, 23);
-            this.randevu_kaydet_btn.TabIndex = 29;
-            this.randevu_kaydet_btn.Text = "Save";
-            this.randevu_kaydet_btn.UseVisualStyleBackColor = true;
-            this.randevu_kaydet_btn.Click += new System.EventHandler(this.randevu_kaydet_btn_Click);
+            this.btn_save.Location = new System.Drawing.Point(28, 309);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(125, 23);
+            this.btn_save.TabIndex = 29;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.randevu_kaydet_btn_Click);
             // 
-            // kimlikno_txt
+            // idno_txt
             // 
-            this.kimlikno_txt.Enabled = false;
-            this.kimlikno_txt.Location = new System.Drawing.Point(103, 189);
-            this.kimlikno_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kimlikno_txt.Mask = "00000000000";
-            this.kimlikno_txt.Name = "kimlikno_txt";
-            this.kimlikno_txt.Size = new System.Drawing.Size(125, 22);
-            this.kimlikno_txt.TabIndex = 28;
+            this.idno_txt.Enabled = false;
+            this.idno_txt.Location = new System.Drawing.Point(103, 189);
+            this.idno_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idno_txt.Mask = "00000000000";
+            this.idno_txt.Name = "idno_txt";
+            this.idno_txt.Size = new System.Drawing.Size(125, 22);
+            this.idno_txt.TabIndex = 28;
             // 
-            // doktor_txt
+            // doctor_txt
             // 
-            this.doktor_txt.FormattingEnabled = true;
-            this.doktor_txt.Location = new System.Drawing.Point(103, 160);
-            this.doktor_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.doktor_txt.Name = "doktor_txt";
-            this.doktor_txt.Size = new System.Drawing.Size(125, 24);
-            this.doktor_txt.TabIndex = 27;
+            this.doctor_txt.FormattingEnabled = true;
+            this.doctor_txt.Location = new System.Drawing.Point(103, 160);
+            this.doctor_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.doctor_txt.Name = "doctor_txt";
+            this.doctor_txt.Size = new System.Drawing.Size(125, 24);
+            this.doctor_txt.TabIndex = 27;
             // 
-            // brans_txt
+            // branch_txt
             // 
-            this.brans_txt.FormattingEnabled = true;
-            this.brans_txt.Location = new System.Drawing.Point(103, 133);
-            this.brans_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.brans_txt.Name = "brans_txt";
-            this.brans_txt.Size = new System.Drawing.Size(125, 24);
-            this.brans_txt.TabIndex = 26;
-            this.brans_txt.SelectedIndexChanged += new System.EventHandler(this.brans_txt_SelectedIndexChanged);
+            this.branch_txt.FormattingEnabled = true;
+            this.branch_txt.Location = new System.Drawing.Point(103, 133);
+            this.branch_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.branch_txt.Name = "branch_txt";
+            this.branch_txt.Size = new System.Drawing.Size(125, 24);
+            this.branch_txt.TabIndex = 26;
+            this.branch_txt.SelectedIndexChanged += new System.EventHandler(this.brans_txt_SelectedIndexChanged);
             // 
-            // zaman_txt
+            // time_txt
             // 
-            this.zaman_txt.Location = new System.Drawing.Point(103, 102);
-            this.zaman_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.zaman_txt.Mask = "00:00";
-            this.zaman_txt.Name = "zaman_txt";
-            this.zaman_txt.Size = new System.Drawing.Size(125, 22);
-            this.zaman_txt.TabIndex = 25;
-            this.zaman_txt.ValidatingType = typeof(System.DateTime);
+            this.time_txt.Location = new System.Drawing.Point(103, 102);
+            this.time_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.time_txt.Mask = "00:00";
+            this.time_txt.Name = "time_txt";
+            this.time_txt.Size = new System.Drawing.Size(125, 22);
+            this.time_txt.TabIndex = 25;
+            this.time_txt.ValidatingType = typeof(System.DateTime);
             // 
-            // tarih_txt
+            // date_txt
             // 
-            this.tarih_txt.Location = new System.Drawing.Point(103, 75);
-            this.tarih_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tarih_txt.Mask = "00/00/0000";
-            this.tarih_txt.Name = "tarih_txt";
-            this.tarih_txt.Size = new System.Drawing.Size(125, 22);
-            this.tarih_txt.TabIndex = 24;
-            this.tarih_txt.ValidatingType = typeof(System.DateTime);
+            this.date_txt.Location = new System.Drawing.Point(103, 75);
+            this.date_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.date_txt.Mask = "00/00/0000";
+            this.date_txt.Name = "date_txt";
+            this.date_txt.Size = new System.Drawing.Size(125, 22);
+            this.date_txt.TabIndex = 24;
+            this.date_txt.ValidatingType = typeof(System.DateTime);
             // 
             // label9
             // 
@@ -548,30 +548,31 @@
             this.dataGridView2.Size = new System.Drawing.Size(382, 169);
             this.dataGridView2.TabIndex = 0;
             // 
-            // btn_geri
+            // btn_rtn
             // 
-            this.btn_geri.Font = new System.Drawing.Font("Calibri Light", 7.8F);
-            this.btn_geri.Location = new System.Drawing.Point(9, 386);
-            this.btn_geri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_geri.Name = "btn_geri";
-            this.btn_geri.Size = new System.Drawing.Size(75, 23);
-            this.btn_geri.TabIndex = 56;
-            this.btn_geri.Text = "Return";
-            this.btn_geri.UseVisualStyleBackColor = true;
-            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
+            this.btn_rtn.Font = new System.Drawing.Font("Calibri Light", 7.8F);
+            this.btn_rtn.Location = new System.Drawing.Point(9, 386);
+            this.btn_rtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_rtn.Name = "btn_rtn";
+            this.btn_rtn.Size = new System.Drawing.Size(75, 23);
+            this.btn_rtn.TabIndex = 56;
+            this.btn_rtn.Text = "Return";
+            this.btn_rtn.UseVisualStyleBackColor = true;
+            this.btn_rtn.Click += new System.EventHandler(this.btn_geri_Click);
             // 
             // Secretary_Information_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 416);
-            this.Controls.Add(this.btn_geri);
+            this.Controls.Add(this.btn_rtn);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Secretary_Information_Panel";
             this.Text = "Secretary Panel";
@@ -597,31 +598,31 @@
         private GroupBox groupBox1;
         private LinkLabel bilgiduzenle_label;
         private Label tc_txt;
-        private Label soyad_txt;
-        private Label ad_txt;
+        private Label surname_txt;
+        private Label name_txt;
         private Label label3;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
         private GroupBox groupBox2;
-        private Button btn_duyuru;
+        private Button btn_notice;
         private RichTextBox duyuru_txt;
         private GroupBox groupBox3;
-        private Button btn_cikis;
-        private Button btn_randevulst;
-        private Button btn_branspnl;
-        private Button btn_doktorpnl;
+        private Button btn_exit;
+        private Button btn_appolist;
+        private Button btn_branchpanel;
+        private Button btn_doctorpl;
         private GroupBox groupBox4;
         private GroupBox groupBox5;
         private GroupBox groupBox6;
         private Label label4;
-        private Button randevu_guncelle_btn;
-        private Button randevu_kaydet_btn;
-        private MaskedTextBox kimlikno_txt;
-        private ComboBox doktor_txt;
-        private ComboBox brans_txt;
-        private MaskedTextBox zaman_txt;
-        private MaskedTextBox tarih_txt;
+        private Button btn_update;
+        private Button btn_save;
+        private MaskedTextBox idno_txt;
+        private ComboBox doctor_txt;
+        private ComboBox branch_txt;
+        private MaskedTextBox time_txt;
+        private MaskedTextBox date_txt;
         private Label label9;
         private Label label8;
         private Label label7;
@@ -630,10 +631,10 @@
         private Label label5;
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
-        private CheckBox durum_btn;
-        private CheckBox guncelle_btn;
-        private Button btn_geri;
-        private Button btn_sil;
+        private CheckBox status_btn;
+        private CheckBox btn_updatemode;
+        private Button btn_rtn;
+        private Button btn_delete;
         private PictureBox pictureBox2;
     }
 }

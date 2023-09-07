@@ -28,53 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_geri = new System.Windows.Forms.Button();
-            this.btn_guncelle = new System.Windows.Forms.Button();
-            this.sifre_txt = new System.Windows.Forms.TextBox();
+            this.btn_rtn = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.password_txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.soyad_txt = new System.Windows.Forms.TextBox();
+            this.surname_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ad_txt = new System.Windows.Forms.TextBox();
+            this.name_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.brans_txt = new System.Windows.Forms.ComboBox();
+            this.branch_txt = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tc_txt = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_geri
+            // btn_rtn
             // 
-            this.btn_geri.Font = new System.Drawing.Font("Calibri Light", 7.8F);
-            this.btn_geri.Location = new System.Drawing.Point(12, 335);
-            this.btn_geri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_geri.Name = "btn_geri";
-            this.btn_geri.Size = new System.Drawing.Size(75, 23);
-            this.btn_geri.TabIndex = 54;
-            this.btn_geri.Text = "Return";
-            this.btn_geri.UseVisualStyleBackColor = true;
-            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
+            this.btn_rtn.Font = new System.Drawing.Font("Calibri Light", 7.8F);
+            this.btn_rtn.Location = new System.Drawing.Point(12, 335);
+            this.btn_rtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_rtn.Name = "btn_rtn";
+            this.btn_rtn.Size = new System.Drawing.Size(75, 23);
+            this.btn_rtn.TabIndex = 54;
+            this.btn_rtn.Text = "Return";
+            this.btn_rtn.UseVisualStyleBackColor = true;
+            this.btn_rtn.Click += new System.EventHandler(this.btn_geri_Click);
             // 
-            // btn_guncelle
+            // btn_update
             // 
-            this.btn_guncelle.Font = new System.Drawing.Font("Calibri Light", 9F);
-            this.btn_guncelle.Location = new System.Drawing.Point(192, 291);
-            this.btn_guncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_guncelle.Name = "btn_guncelle";
-            this.btn_guncelle.Size = new System.Drawing.Size(125, 23);
-            this.btn_guncelle.TabIndex = 53;
-            this.btn_guncelle.Text = "Update";
-            this.btn_guncelle.UseVisualStyleBackColor = true;
-            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
+            this.btn_update.Font = new System.Drawing.Font("Calibri Light", 9F);
+            this.btn_update.Location = new System.Drawing.Point(192, 291);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(125, 23);
+            this.btn_update.TabIndex = 53;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
-            // sifre_txt
+            // password_txt
             // 
-            this.sifre_txt.Location = new System.Drawing.Point(192, 265);
-            this.sifre_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.sifre_txt.Name = "sifre_txt";
-            this.sifre_txt.Size = new System.Drawing.Size(125, 22);
-            this.sifre_txt.TabIndex = 52;
+            this.password_txt.Location = new System.Drawing.Point(192, 265);
+            this.password_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.password_txt.Name = "password_txt";
+            this.password_txt.Size = new System.Drawing.Size(125, 22);
+            this.password_txt.TabIndex = 52;
             // 
             // label6
             // 
@@ -87,13 +87,13 @@
             this.label6.TabIndex = 51;
             this.label6.Text = "Password:";
             // 
-            // soyad_txt
+            // surname_txt
             // 
-            this.soyad_txt.Location = new System.Drawing.Point(192, 155);
-            this.soyad_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.soyad_txt.Name = "soyad_txt";
-            this.soyad_txt.Size = new System.Drawing.Size(125, 22);
-            this.soyad_txt.TabIndex = 44;
+            this.surname_txt.Location = new System.Drawing.Point(192, 155);
+            this.surname_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.surname_txt.Name = "surname_txt";
+            this.surname_txt.Size = new System.Drawing.Size(125, 22);
+            this.surname_txt.TabIndex = 44;
             // 
             // label2
             // 
@@ -106,13 +106,13 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "Doctor Surname:";
             // 
-            // ad_txt
+            // name_txt
             // 
-            this.ad_txt.Location = new System.Drawing.Point(192, 122);
-            this.ad_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ad_txt.Name = "ad_txt";
-            this.ad_txt.Size = new System.Drawing.Size(125, 22);
-            this.ad_txt.TabIndex = 42;
+            this.name_txt.Location = new System.Drawing.Point(192, 122);
+            this.name_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.name_txt.Name = "name_txt";
+            this.name_txt.Size = new System.Drawing.Size(125, 22);
+            this.name_txt.TabIndex = 42;
             // 
             // label1
             // 
@@ -147,14 +147,14 @@
             this.label3.TabIndex = 55;
             this.label3.Text = "Doktor Branch:";
             // 
-            // brans_txt
+            // branch_txt
             // 
-            this.brans_txt.FormattingEnabled = true;
-            this.brans_txt.Location = new System.Drawing.Point(192, 226);
-            this.brans_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.brans_txt.Name = "brans_txt";
-            this.brans_txt.Size = new System.Drawing.Size(125, 24);
-            this.brans_txt.TabIndex = 56;
+            this.branch_txt.FormattingEnabled = true;
+            this.branch_txt.Location = new System.Drawing.Point(192, 226);
+            this.branch_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.branch_txt.Name = "branch_txt";
+            this.branch_txt.Size = new System.Drawing.Size(125, 24);
+            this.branch_txt.TabIndex = 56;
             // 
             // label5
             // 
@@ -183,15 +183,15 @@
             this.ClientSize = new System.Drawing.Size(379, 369);
             this.Controls.Add(this.tc_txt);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.brans_txt);
+            this.Controls.Add(this.branch_txt);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btn_geri);
-            this.Controls.Add(this.btn_guncelle);
-            this.Controls.Add(this.sifre_txt);
+            this.Controls.Add(this.btn_rtn);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.password_txt);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.soyad_txt);
+            this.Controls.Add(this.surname_txt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ad_txt);
+            this.Controls.Add(this.name_txt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -208,17 +208,17 @@
 
         #endregion
 
-        private Button btn_geri;
-        private Button btn_guncelle;
-        private TextBox sifre_txt;
+        private Button btn_rtn;
+        private Button btn_update;
+        private TextBox password_txt;
         private Label label6;
-        private TextBox soyad_txt;
+        private TextBox surname_txt;
         private Label label2;
-        private TextBox ad_txt;
+        private TextBox name_txt;
         private Label label1;
         private PictureBox pictureBox1;
         private Label label3;
-        private ComboBox brans_txt;
+        private ComboBox branch_txt;
         private Label label5;
         private MaskedTextBox tc_txt;
     }

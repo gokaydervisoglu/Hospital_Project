@@ -14,13 +14,13 @@ namespace Hospital_Project
     public partial class Appointment_List_Panel : Form
     {
         public string? id;
-        public string? tarih;
-        public string? saat;
-        public string? brans;
-        public string? doktor;
-        public string? durum;
+        public string? date;
+        public string? time;
+        public string? branch;
+        public string? doctor;
+        public string? status;
         public string? tc;
-        public bool bdurum;
+        public bool bstatus;
 
      
         public Appointment_List_Panel()
@@ -41,13 +41,13 @@ namespace Hospital_Project
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Secretary_Information_Panel? fr = Application.OpenForms["Sekreter_Bilgi_Paneli"] as Secretary_Information_Panel;
+            Secretary_Information_Panel? fr = Application.OpenForms["Secretary_Notice_Panel"] as Secretary_Information_Panel;
             int selectedRow = dataGridView1.CurrentCell.RowIndex;
             id = dataGridView1.Rows[selectedRow].Cells[0].Value.ToString();
 
             if (fr == null)
             {
-                MessageBox.Show("Kiritik Hata!");
+                MessageBox.Show("Critical Error");
             }
             else if(fr !=  null)
             {
@@ -55,29 +55,28 @@ namespace Hospital_Project
                 //Randevu Alma
                 if (id != null)
                 {
-                    tarih = dataGridView1.Rows[selectedRow].Cells[1].Value.ToString();
-                    saat = dataGridView1.Rows[selectedRow].Cells[2].Value.ToString();
-                    brans = dataGridView1.Rows[selectedRow].Cells[3].Value.ToString();
-                    doktor = dataGridView1.Rows[selectedRow].Cells[4].Value.ToString();
-                    durum = dataGridView1.Rows[selectedRow].Cells[5].Value.ToString();
+                    date = dataGridView1.Rows[selectedRow].Cells[1].Value.ToString();
+                    time = dataGridView1.Rows[selectedRow].Cells[2].Value.ToString();
+                    branch = dataGridView1.Rows[selectedRow].Cells[3].Value.ToString();
+                    doctor = dataGridView1.Rows[selectedRow].Cells[4].Value.ToString();
+                    status = dataGridView1.Rows[selectedRow].Cells[5].Value.ToString();
 
-                    if(durum == "True")
+                    if(status == "True")
                     {
-                        bdurum = true;
+                        bstatus = true;
                     }
                     else
                     {
-                        bdurum = false;
+                        bstatus = false;
                     }
 
                     tc = dataGridView1.Rows[selectedRow].Cells[6].Value.ToString();
 
-                    fr.SetData(id, tarih, saat, brans, doktor, tc , bdurum);
-                    //MessageBox.Show("Randevu Secildi");
+                    fr.SetData(id, date, time, branch, doctor, tc , bstatus);
                 }
                 else
                 {
-                    MessageBox.Show("Randevu Secilemedi!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Appointment dont select!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

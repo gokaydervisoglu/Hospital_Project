@@ -31,21 +31,21 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.sikayet_txt = new System.Windows.Forms.RichTextBox();
+            this.appoint_info = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bilgiduzenle_label = new System.Windows.Forms.LinkLabel();
+            this.edit_btn = new System.Windows.Forms.LinkLabel();
             this.tc_txt = new System.Windows.Forms.Label();
-            this.soyad_txt = new System.Windows.Forms.Label();
-            this.ad_txt = new System.Windows.Forms.Label();
+            this.surname_txt = new System.Windows.Forms.Label();
+            this.name_txt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_duyurular = new System.Windows.Forms.Button();
-            this.btn_iletisim = new System.Windows.Forms.Button();
-            this.btn_cikis = new System.Windows.Forms.Button();
+            this.btn_Annoct = new System.Windows.Forms.Button();
+            this.btn_com = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btn_geri = new System.Windows.Forms.Button();
+            this.btn_rtn = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.sikayet_txt);
+            this.groupBox2.Controls.Add(this.appoint_info);
             this.groupBox2.Location = new System.Drawing.Point(12, 141);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
@@ -92,22 +92,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Appointment Info";
             // 
-            // sikayet_txt
+            // appoint_info
             // 
-            this.sikayet_txt.Location = new System.Drawing.Point(6, 21);
-            this.sikayet_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.sikayet_txt.Name = "sikayet_txt";
-            this.sikayet_txt.ReadOnly = true;
-            this.sikayet_txt.Size = new System.Drawing.Size(337, 111);
-            this.sikayet_txt.TabIndex = 20;
-            this.sikayet_txt.Text = "";
+            this.appoint_info.Location = new System.Drawing.Point(6, 21);
+            this.appoint_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.appoint_info.Name = "appoint_info";
+            this.appoint_info.ReadOnly = true;
+            this.appoint_info.Size = new System.Drawing.Size(337, 111);
+            this.appoint_info.TabIndex = 20;
+            this.appoint_info.Text = "";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.bilgiduzenle_label);
+            this.groupBox1.Controls.Add(this.edit_btn);
             this.groupBox1.Controls.Add(this.tc_txt);
-            this.groupBox1.Controls.Add(this.soyad_txt);
-            this.groupBox1.Controls.Add(this.ad_txt);
+            this.groupBox1.Controls.Add(this.surname_txt);
+            this.groupBox1.Controls.Add(this.name_txt);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -121,17 +121,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Info";
             // 
-            // bilgiduzenle_label
+            // edit_btn
             // 
-            this.bilgiduzenle_label.AutoSize = true;
-            this.bilgiduzenle_label.LinkColor = System.Drawing.Color.DarkGreen;
-            this.bilgiduzenle_label.Location = new System.Drawing.Point(232, 105);
-            this.bilgiduzenle_label.Name = "bilgiduzenle_label";
-            this.bilgiduzenle_label.Size = new System.Drawing.Size(98, 16);
-            this.bilgiduzenle_label.TabIndex = 15;
-            this.bilgiduzenle_label.TabStop = true;
-            this.bilgiduzenle_label.Text = "Edit Information";
-            this.bilgiduzenle_label.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.bilgiduzenle_label_LinkClicked);
+            this.edit_btn.AutoSize = true;
+            this.edit_btn.LinkColor = System.Drawing.Color.DarkGreen;
+            this.edit_btn.Location = new System.Drawing.Point(232, 105);
+            this.edit_btn.Name = "edit_btn";
+            this.edit_btn.Size = new System.Drawing.Size(98, 16);
+            this.edit_btn.TabIndex = 15;
+            this.edit_btn.TabStop = true;
+            this.edit_btn.Text = "Edit Information";
+            this.edit_btn.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.bilgiduzenle_label_LinkClicked);
             // 
             // tc_txt
             // 
@@ -143,25 +143,25 @@
             this.tc_txt.TabIndex = 14;
             this.tc_txt.Text = "00000000000";
             // 
-            // soyad_txt
+            // surname_txt
             // 
-            this.soyad_txt.AutoSize = true;
-            this.soyad_txt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.soyad_txt.Location = new System.Drawing.Point(228, 46);
-            this.soyad_txt.Name = "soyad_txt";
-            this.soyad_txt.Size = new System.Drawing.Size(38, 21);
-            this.soyad_txt.TabIndex = 13;
-            this.soyad_txt.Text = "Null";
+            this.surname_txt.AutoSize = true;
+            this.surname_txt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.surname_txt.Location = new System.Drawing.Point(228, 46);
+            this.surname_txt.Name = "surname_txt";
+            this.surname_txt.Size = new System.Drawing.Size(38, 21);
+            this.surname_txt.TabIndex = 13;
+            this.surname_txt.Text = "Null";
             // 
-            // ad_txt
+            // name_txt
             // 
-            this.ad_txt.AutoSize = true;
-            this.ad_txt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
-            this.ad_txt.Location = new System.Drawing.Point(228, 17);
-            this.ad_txt.Name = "ad_txt";
-            this.ad_txt.Size = new System.Drawing.Size(38, 21);
-            this.ad_txt.TabIndex = 12;
-            this.ad_txt.Text = "Null";
+            this.name_txt.AutoSize = true;
+            this.name_txt.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold);
+            this.name_txt.Location = new System.Drawing.Point(228, 17);
+            this.name_txt.Name = "name_txt";
+            this.name_txt.Size = new System.Drawing.Size(38, 21);
+            this.name_txt.TabIndex = 12;
+            this.name_txt.Text = "Null";
             // 
             // label3
             // 
@@ -207,45 +207,45 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_duyurular
+            // btn_Annoct
             // 
-            this.btn_duyurular.Location = new System.Drawing.Point(6, 21);
-            this.btn_duyurular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_duyurular.Name = "btn_duyurular";
-            this.btn_duyurular.Size = new System.Drawing.Size(165, 26);
-            this.btn_duyurular.TabIndex = 0;
-            this.btn_duyurular.Text = "Announcements";
-            this.btn_duyurular.UseVisualStyleBackColor = true;
-            this.btn_duyurular.Click += new System.EventHandler(this.btn_duyurular_Click);
+            this.btn_Annoct.Location = new System.Drawing.Point(6, 21);
+            this.btn_Annoct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Annoct.Name = "btn_Annoct";
+            this.btn_Annoct.Size = new System.Drawing.Size(165, 26);
+            this.btn_Annoct.TabIndex = 0;
+            this.btn_Annoct.Text = "Announcements";
+            this.btn_Annoct.UseVisualStyleBackColor = true;
+            this.btn_Annoct.Click += new System.EventHandler(this.btn_duyurular_Click);
             // 
-            // btn_iletisim
+            // btn_com
             // 
-            this.btn_iletisim.Enabled = false;
-            this.btn_iletisim.Location = new System.Drawing.Point(177, 21);
-            this.btn_iletisim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_iletisim.Name = "btn_iletisim";
-            this.btn_iletisim.Size = new System.Drawing.Size(165, 26);
-            this.btn_iletisim.TabIndex = 1;
-            this.btn_iletisim.Text = "Communication";
-            this.btn_iletisim.UseVisualStyleBackColor = true;
+            this.btn_com.Enabled = false;
+            this.btn_com.Location = new System.Drawing.Point(177, 21);
+            this.btn_com.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_com.Name = "btn_com";
+            this.btn_com.Size = new System.Drawing.Size(165, 26);
+            this.btn_com.TabIndex = 1;
+            this.btn_com.Text = "Communication";
+            this.btn_com.UseVisualStyleBackColor = true;
             // 
-            // btn_cikis
+            // btn_exit
             // 
-            this.btn_cikis.Location = new System.Drawing.Point(177, 49);
-            this.btn_cikis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_cikis.Name = "btn_cikis";
-            this.btn_cikis.Size = new System.Drawing.Size(165, 26);
-            this.btn_cikis.TabIndex = 2;
-            this.btn_cikis.Text = "Exit";
-            this.btn_cikis.UseVisualStyleBackColor = true;
-            this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
+            this.btn_exit.Location = new System.Drawing.Point(177, 49);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(165, 26);
+            this.btn_exit.TabIndex = 2;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_cikis_Click);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.btn_geri);
-            this.groupBox5.Controls.Add(this.btn_cikis);
-            this.groupBox5.Controls.Add(this.btn_iletisim);
-            this.groupBox5.Controls.Add(this.btn_duyurular);
+            this.groupBox5.Controls.Add(this.btn_rtn);
+            this.groupBox5.Controls.Add(this.btn_exit);
+            this.groupBox5.Controls.Add(this.btn_com);
+            this.groupBox5.Controls.Add(this.btn_Annoct);
             this.groupBox5.Location = new System.Drawing.Point(18, 289);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
@@ -255,16 +255,16 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Fast access";
             // 
-            // btn_geri
+            // btn_rtn
             // 
-            this.btn_geri.Location = new System.Drawing.Point(6, 49);
-            this.btn_geri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_geri.Name = "btn_geri";
-            this.btn_geri.Size = new System.Drawing.Size(165, 26);
-            this.btn_geri.TabIndex = 3;
-            this.btn_geri.Text = "Return";
-            this.btn_geri.UseVisualStyleBackColor = true;
-            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
+            this.btn_rtn.Location = new System.Drawing.Point(6, 49);
+            this.btn_rtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_rtn.Name = "btn_rtn";
+            this.btn_rtn.Size = new System.Drawing.Size(165, 26);
+            this.btn_rtn.TabIndex = 3;
+            this.btn_rtn.Text = "Return";
+            this.btn_rtn.UseVisualStyleBackColor = true;
+            this.btn_rtn.Click += new System.EventHandler(this.btn_geri_Click);
             // 
             // Doctor_Info_Panel
             // 
@@ -295,21 +295,21 @@
         #endregion
         private GroupBox groupBox3;
         private GroupBox groupBox2;
-        private RichTextBox sikayet_txt;
+        private RichTextBox appoint_info;
         private GroupBox groupBox1;
-        private LinkLabel bilgiduzenle_label;
+        private LinkLabel edit_btn;
         private Label tc_txt;
-        private Label soyad_txt;
-        private Label ad_txt;
+        private Label surname_txt;
+        private Label name_txt;
         private Label label3;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private Button btn_duyurular;
-        private Button btn_iletisim;
-        private Button btn_cikis;
+        private Button btn_Annoct;
+        private Button btn_com;
+        private Button btn_exit;
         private GroupBox groupBox5;
-        private Button btn_geri;
+        private Button btn_rtn;
         private DataGridView dataGridView1;
     }
 }

@@ -23,12 +23,12 @@ namespace Hospital_Project
 
         private void btn_giris_Click(object sender, EventArgs e)
         {
-            if (btnhatirla.Checked == true)
+            if (btn_rm.Checked == true)
             {
                 key = true;
-                if (tc_txt.Text != "" && sifre_txt.Text != "")
+                if (tc_txt.Text != "" && password_txt.Text != "")
                 {
-                    File.Delete("sekreter.txt");
+                    File.Delete("secretary.txt");
                     adminwr();
                 }
                 else
@@ -37,16 +37,16 @@ namespace Hospital_Project
                 }
             }
 
-            if (tc_txt.Text == "" || sifre_txt.Text == "")
+            if (tc_txt.Text == "" || password_txt.Text == "")
             {
-                MessageBox.Show("Lütfen kimlik no ve şifreyi giriniz");
+                MessageBox.Show("Please enter ID number and password");
             }
             else
             {
                 SqlCommand cmd = new SqlCommand("Select * From Tbl_Sekreter where SekreterTC=@p1 and SekreterSifre=@p2", sql.baglanti());
 
                 cmd.Parameters.AddWithValue("@p1", tc_txt.Text);
-                cmd.Parameters.AddWithValue("@p2", sifre_txt.Text);
+                cmd.Parameters.AddWithValue("@p2", password_txt.Text);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
@@ -59,7 +59,7 @@ namespace Hospital_Project
                 }
                 else
                 {
-                    MessageBox.Show("Hatali Kullanici Adi ya da Sifre");
+                    MessageBox.Show("Incorrect Username or Password");
                 }
             }
         }
@@ -71,10 +71,10 @@ namespace Hospital_Project
 
         private void btnhatirla_CheckedChanged(object sender, EventArgs e)
         {
-            if (btnhatirla.Checked == true)
+            if (btn_rm.Checked == true)
             {
                 key = true;
-                if (tc_txt.Text != "" && sifre_txt.Text != "")
+                if (tc_txt.Text != "" && password_txt.Text != "")
                 {
                     adminwr();
                 }
@@ -86,18 +86,18 @@ namespace Hospital_Project
             else
             {
                 key = false;
-                File.Delete("doktor.txt");
+                File.Delete("secretary.txt");
                 keywr();
             }
         }
         private void adminwr()
         {
             string tc, sifre;
-            string path = "sekreter.txt";
+            string path = "secretary.txt";
             string path2 = "key3.txt";
 
             tc = tc_txt.Text;
-            sifre = sifre_txt.Text;
+            sifre = password_txt.Text;
 
             using (StreamWriter sw = new StreamWriter(path))
             {
@@ -121,7 +121,7 @@ namespace Hospital_Project
         private void adminrd()
         {
             string tc, sifre;
-            string path = "sekreter.txt";
+            string path = "secretary.txt";
 
             if (File.Exists(path))
             {
@@ -131,7 +131,7 @@ namespace Hospital_Project
                     sifre = sr.ReadLine();
                 }
                 tc_txt.Text = tc;
-                sifre_txt.Text = sifre;
+                password_txt.Text = sifre;
             }
         }
         private void keyrd()
@@ -153,14 +153,14 @@ namespace Hospital_Project
 
             if (key)
             {
-                btnhatirla.Checked = true;
+                btn_rm.Checked = true;
                 adminrd();
             }
             else
             {
                 tc_txt.Text = string.Empty;
-                sifre_txt.Text = string.Empty;
-                btnhatirla.Checked = false;
+                password_txt.Text = string.Empty;
+                btn_rm.Checked = false;
             }
         }
     }

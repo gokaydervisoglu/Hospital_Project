@@ -17,8 +17,8 @@ namespace Hospital_Project
         public string? id;
         private string? tc;
         private string? mail;
-        private string? sifre;
-        private string? isim;
+        private string? password;
+        private string? name;
         public Secretary_Notice_Panel()
         {
             InitializeComponent();
@@ -29,13 +29,13 @@ namespace Hospital_Project
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            //Randevu Alma
+            //Get an Appointment
             int selectedRow = dataGridView2.CurrentCell.RowIndex;
             id = dataGridView2.Rows[selectedRow].Cells[0].Value.ToString();
 
             if (tc != null)
             {
-                //Hasta Bilgi Cekme
+                // Patient Information Retrieval
                 DataTable dt2 = new DataTable();
                 SqlCommand cmd = new SqlCommand("Select * from Tbl_Hastalar where HastaTC=@p1", sql.baglanti());
                 cmd.Parameters.AddWithValue("@p1", tc);
@@ -49,16 +49,16 @@ namespace Hospital_Project
                 SqlDataReader rd2 = cmd.ExecuteReader();
                 while (rd2.Read())
                 {
-                    isim = rd2[1].ToString();
-                    sifre = rd2[5].ToString();
+                    name = rd2[1].ToString();
+                    password = rd2[5].ToString();
                 }
 
                 sql.baglanti().Close();
 
-                //Panele Aktarma
+                //Transfer to Panel
 
                 tc_txt.Text = tc;
-                sifre_txt.Text = sifre;
+                password_txt.Text = password;
                 mail_txt.Text = mail;
             }
 
@@ -66,24 +66,24 @@ namespace Hospital_Project
 
         private void Sekreter_Duyuru_Paneli_Load(object sender, EventArgs e)
         {
-            hasta_duyuru_txt.Checked = true;
+            patient_btn.Checked = true;
         }
 
         private void hasta_duyuru_txt_CheckedChanged(object sender, EventArgs e)
         {
-            if(hasta_duyuru_txt.Checked ==  false)
+            if(patient_btn.Checked ==  false)
             {
-                doktor_duyuru_txt.Checked = true;
-                groupBox2.Text = "Doktor Duyuru";
+                doctor_btn.Checked = true;
+                groupBox2.Text = "Doctor Info";
             }
             else
             {
                 //Hasta Cekme
-                doktor_duyuru_txt.Checked = false;
-                groupBox2.Text = "Hasta Duyuru";
+                doctor_btn.Checked = false;
+                groupBox2.Text = "Patient İnfo";
                 DataTable dt = new DataTable();
 
-                SqlCommand cmd2 = new SqlCommand("Select * from Tbl_SifreUnuttum", sql.baglanti());
+                SqlCommand cmd2 = new SqlCommand("Select * from Tbl_Hastalar", sql.baglanti());
                 SqlDataAdapter sqldata = new SqlDataAdapter(cmd2);
                 sqldata.Fill(dt);
                 
@@ -104,9 +104,9 @@ namespace Hospital_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (tc_txt.Text == "" || sifre_txt.Text == "" || mail_txt.Text == "")
+            if (tc_txt.Text == "" || password_txt.Text == "" || mail_txt.Text == "")
             {
-                MessageBox.Show("Lütfen Sifresini Sifirlayacaginiz kisinin bilgilerini giriniz!");
+                MessageBox.Show("Please enter the information of the person whose password you will reset!");
             }
             else
             {
@@ -115,7 +115,7 @@ namespace Hospital_Project
 
                 if (tc != null)
                 {
-                    //Sifre Kurtarma
+                    //password helper
 
                     SqlCommand cmd = new SqlCommand("Update Tbl_Hastalar Set HastaSifre=@p1 where HastaTC=@p2", sql.baglanti());
                     cmd.Parameters.AddWithValue("@p2", tc);
@@ -123,7 +123,7 @@ namespace Hospital_Project
                     cmd.ExecuteNonQuery();
                     sql.baglanti().Close();
                 }
-                //Mail Gonderme
+                //Mail Sending
                 MailMessage mailMessage = new MailMessage();
                 SmtpClient smtpClient = new SmtpClient();
                 smtpClient.Credentials = new System.Net.NetworkCredential("gokay_d@outlook.com", "vuNkad-kysvaq-wubqo6");
@@ -132,14 +132,14 @@ namespace Hospital_Project
                 smtpClient.EnableSsl = true;
                 mailMessage.To.Add(mail_txt.Text);
                 mailMessage.From = new MailAddress("gokay_d@outlook.com");
-                mailMessage.Subject = "Sifre Sıfırlama";
-                mailMessage.Body = ("Merhabalar " + isim + "sifreni sıfırladik yeni geçici sifren=" + randomNumber + ",sonradan sifreni panelden degisebilirsin, iyi günler.");
+                mailMessage.Subject = "password reset";
+                mailMessage.Body = ("Hello " + name + "your password has been reset ,your temporary password=" + randomNumber + ",You can change your password from the panel later, have a nice day.");
                 smtpClient.Send(mailMessage);
 
                 MessageBox.Show("Mail Gonderildi");
 
-                //Sifre Kurtarma Duyuru Kaldirma
-                SqlCommand cmd2 = new SqlCommand("delete from Tbl_SifremUnuttum where HastaTC=@p1", sql.baglanti());
+                //password Recovery Announcement Uninstall
+                SqlCommand cmd2 = new SqlCommand("delete from Tbl_Hastalar where HastaTC=@p1", sql.baglanti());
                 cmd2.Parameters.AddWithValue("@p1", tc);
                 cmd2.ExecuteNonQuery();
                 sql.baglanti().Close();
@@ -147,7 +147,7 @@ namespace Hospital_Project
                 dataGridView1.ClearSelection();
 
                 tc_txt.Clear();
-                sifre_txt.Clear();
+                password_txt.Clear();
                 mail_txt.Clear();
             }
 

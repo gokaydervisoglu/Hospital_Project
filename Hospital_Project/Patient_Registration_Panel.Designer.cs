@@ -30,19 +30,19 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ad_txt = new System.Windows.Forms.TextBox();
-            this.soyad_txt = new System.Windows.Forms.TextBox();
+            this.name_txt = new System.Windows.Forms.TextBox();
+            this.surname_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tc_txt = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cinsiyet_txt = new System.Windows.Forms.ComboBox();
-            this.tel_txt = new System.Windows.Forms.MaskedTextBox();
+            this.sex_txt = new System.Windows.Forms.ComboBox();
+            this.phone_txt = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.sifre_txt = new System.Windows.Forms.TextBox();
-            this.btn_kayit = new System.Windows.Forms.Button();
-            this.btn_geri = new System.Windows.Forms.Button();
+            this.password_txt = new System.Windows.Forms.TextBox();
+            this.btn_register = new System.Windows.Forms.Button();
+            this.btn_rtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,21 +68,21 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Patient Name:";
             // 
-            // ad_txt
+            // name_txt
             // 
-            this.ad_txt.Location = new System.Drawing.Point(193, 122);
-            this.ad_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ad_txt.Name = "ad_txt";
-            this.ad_txt.Size = new System.Drawing.Size(125, 22);
-            this.ad_txt.TabIndex = 1;
+            this.name_txt.Location = new System.Drawing.Point(193, 122);
+            this.name_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.name_txt.Name = "name_txt";
+            this.name_txt.Size = new System.Drawing.Size(125, 22);
+            this.name_txt.TabIndex = 1;
             // 
-            // soyad_txt
+            // surname_txt
             // 
-            this.soyad_txt.Location = new System.Drawing.Point(193, 155);
-            this.soyad_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.soyad_txt.Name = "soyad_txt";
-            this.soyad_txt.Size = new System.Drawing.Size(125, 22);
-            this.soyad_txt.TabIndex = 2;
+            this.surname_txt.Location = new System.Drawing.Point(193, 155);
+            this.surname_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.surname_txt.Name = "surname_txt";
+            this.surname_txt.Size = new System.Drawing.Size(125, 22);
+            this.surname_txt.TabIndex = 2;
             // 
             // label2
             // 
@@ -137,26 +137,26 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Patient Sex:";
             // 
-            // cinsiyet_txt
+            // sex_txt
             // 
-            this.cinsiyet_txt.FormattingEnabled = true;
-            this.cinsiyet_txt.Items.AddRange(new object[] {
+            this.sex_txt.FormattingEnabled = true;
+            this.sex_txt.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.cinsiyet_txt.Location = new System.Drawing.Point(193, 253);
-            this.cinsiyet_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cinsiyet_txt.Name = "cinsiyet_txt";
-            this.cinsiyet_txt.Size = new System.Drawing.Size(125, 24);
-            this.cinsiyet_txt.TabIndex = 5;
+            this.sex_txt.Location = new System.Drawing.Point(193, 253);
+            this.sex_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sex_txt.Name = "sex_txt";
+            this.sex_txt.Size = new System.Drawing.Size(125, 24);
+            this.sex_txt.TabIndex = 5;
             // 
-            // tel_txt
+            // phone_txt
             // 
-            this.tel_txt.Location = new System.Drawing.Point(193, 220);
-            this.tel_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tel_txt.Mask = "(999) 000-0000";
-            this.tel_txt.Name = "tel_txt";
-            this.tel_txt.Size = new System.Drawing.Size(125, 22);
-            this.tel_txt.TabIndex = 4;
+            this.phone_txt.Location = new System.Drawing.Point(193, 220);
+            this.phone_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.phone_txt.Mask = "(999) 000-0000";
+            this.phone_txt.Name = "phone_txt";
+            this.phone_txt.Size = new System.Drawing.Size(125, 22);
+            this.phone_txt.TabIndex = 4;
             // 
             // label6
             // 
@@ -169,58 +169,58 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Password:";
             // 
-            // sifre_txt
+            // password_txt
             // 
-            this.sifre_txt.Location = new System.Drawing.Point(193, 303);
-            this.sifre_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.sifre_txt.Name = "sifre_txt";
-            this.sifre_txt.Size = new System.Drawing.Size(125, 22);
-            this.sifre_txt.TabIndex = 6;
+            this.password_txt.Location = new System.Drawing.Point(193, 303);
+            this.password_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.password_txt.Name = "password_txt";
+            this.password_txt.Size = new System.Drawing.Size(125, 22);
+            this.password_txt.TabIndex = 6;
             // 
-            // btn_kayit
+            // btn_register
             // 
-            this.btn_kayit.Font = new System.Drawing.Font("Calibri Light", 9F);
-            this.btn_kayit.Location = new System.Drawing.Point(193, 330);
-            this.btn_kayit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_kayit.Name = "btn_kayit";
-            this.btn_kayit.Size = new System.Drawing.Size(125, 26);
-            this.btn_kayit.TabIndex = 7;
-            this.btn_kayit.Text = "Register";
-            this.btn_kayit.UseVisualStyleBackColor = true;
-            this.btn_kayit.Click += new System.EventHandler(this.btn_kayit_Click_1);
+            this.btn_register.Font = new System.Drawing.Font("Calibri Light", 9F);
+            this.btn_register.Location = new System.Drawing.Point(193, 330);
+            this.btn_register.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_register.Name = "btn_register";
+            this.btn_register.Size = new System.Drawing.Size(125, 26);
+            this.btn_register.TabIndex = 7;
+            this.btn_register.Text = "Register";
+            this.btn_register.UseVisualStyleBackColor = true;
+            this.btn_register.Click += new System.EventHandler(this.btn_kayit_Click_1);
             // 
-            // btn_geri
+            // btn_rtn
             // 
-            this.btn_geri.Font = new System.Drawing.Font("Segoe UI Light", 7.8F);
-            this.btn_geri.Location = new System.Drawing.Point(5, 359);
-            this.btn_geri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_geri.Name = "btn_geri";
-            this.btn_geri.Size = new System.Drawing.Size(58, 28);
-            this.btn_geri.TabIndex = 8;
-            this.btn_geri.Text = "Return";
-            this.btn_geri.UseVisualStyleBackColor = true;
-            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click_1);
+            this.btn_rtn.Font = new System.Drawing.Font("Segoe UI Light", 7.8F);
+            this.btn_rtn.Location = new System.Drawing.Point(5, 359);
+            this.btn_rtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_rtn.Name = "btn_rtn";
+            this.btn_rtn.Size = new System.Drawing.Size(58, 28);
+            this.btn_rtn.TabIndex = 8;
+            this.btn_rtn.Text = "Return";
+            this.btn_rtn.UseVisualStyleBackColor = true;
+            this.btn_rtn.Click += new System.EventHandler(this.btn_geri_Click_1);
             // 
             // Patient_Registration_Panel
             // 
-            this.AcceptButton = this.btn_kayit;
+            this.AcceptButton = this.btn_register;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(379, 395);
-            this.Controls.Add(this.btn_geri);
-            this.Controls.Add(this.btn_kayit);
-            this.Controls.Add(this.sifre_txt);
+            this.Controls.Add(this.btn_rtn);
+            this.Controls.Add(this.btn_register);
+            this.Controls.Add(this.password_txt);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tel_txt);
-            this.Controls.Add(this.cinsiyet_txt);
+            this.Controls.Add(this.phone_txt);
+            this.Controls.Add(this.sex_txt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tc_txt);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.soyad_txt);
+            this.Controls.Add(this.surname_txt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ad_txt);
+            this.Controls.Add(this.name_txt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -239,18 +239,18 @@
 
         private PictureBox pictureBox1;
         private Label label1;
-        private TextBox ad_txt;
-        private TextBox soyad_txt;
+        private TextBox name_txt;
+        private TextBox surname_txt;
         private Label label2;
         private Label label3;
         private MaskedTextBox tc_txt;
         private Label label4;
         private Label label5;
-        private ComboBox cinsiyet_txt;
-        private MaskedTextBox tel_txt;
+        private ComboBox sex_txt;
+        private MaskedTextBox phone_txt;
         private Label label6;
-        private TextBox sifre_txt;
-        private Button btn_kayit;
-        private Button btn_geri;
+        private TextBox password_txt;
+        private Button btn_register;
+        private Button btn_rtn;
     }
 }

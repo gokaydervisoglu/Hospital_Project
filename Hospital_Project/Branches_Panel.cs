@@ -22,17 +22,17 @@ namespace Hospital_Project
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {
-            if (bransad_txt.Text == "")
+            if (branchname_txt.Text == "")
             {
-                MessageBox.Show("Lutfen Brans Adi Giriniz");
+                MessageBox.Show("Please enter the branch name");
             }
             else 
             {
                 SqlCommand cmd = new SqlCommand("insert into Tbl_Brans (BransAd) values (@p1)", sql.baglanti());
-                cmd.Parameters.AddWithValue("@p1", bransad_txt.Text);
+                cmd.Parameters.AddWithValue("@p1", branchname_txt.Text);
                 cmd.ExecuteNonQuery();
                 sql.baglanti().Close();
-                MessageBox.Show("Brans Atandi");
+                MessageBox.Show("Branch Added");
             }
         }
 
@@ -49,34 +49,34 @@ namespace Hospital_Project
 
         private void sil_btn_Click(object sender, EventArgs e)
         {
-            if (bransid_txt.Text == "")
+            if (branchid_txt.Text == "")
             {
-                MessageBox.Show("Lutfen Brans ID Giriniz");
+                MessageBox.Show("Please enter the branch id");
             }
             else
             {
                 SqlCommand cmd = new SqlCommand("delete from Tbl_Brans where BransID=@p1", sql.baglanti());
-                cmd.Parameters.AddWithValue("@p1", bransad_txt.Text);
+                cmd.Parameters.AddWithValue("@p1", branchname_txt.Text);
                 cmd.ExecuteNonQuery();
                 sql.baglanti().Close();
-                MessageBox.Show("Brans Silindi");
+                MessageBox.Show("Branch deleted");
             }
         }
 
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
-            if (bransid_txt.Text == "")
+            if (branchid_txt.Text == "")
             {
-                MessageBox.Show("Lutfen Brans ID Giriniz");
+                MessageBox.Show("Please enter the branch id");
             }
             else
             {
                 SqlCommand cmd = new SqlCommand("update Tbl_Brans Set BransAd=@p1 where BransID=@p2", sql.baglanti());
-                cmd.Parameters.AddWithValue("@p1", bransad_txt.Text);
-                cmd.Parameters.AddWithValue("@p2", bransid_txt.Text);
+                cmd.Parameters.AddWithValue("@p1", branchname_txt.Text);
+                cmd.Parameters.AddWithValue("@p2", branchid_txt.Text);
                 cmd.ExecuteNonQuery();
                 sql.baglanti().Close();
-                MessageBox.Show("Brans Guncellendi");
+                MessageBox.Show("Branch Updated");
             }
         }
     }

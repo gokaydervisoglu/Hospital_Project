@@ -22,36 +22,36 @@ namespace Hospital_Project
 
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
-            if (ad_txt.Text == "" || soyad_txt.Text == "" || brans_txt.Text == "" || sifre_txt.Text == "")
+            if (name_txt.Text == "" || surname_txt.Text == "" || branch_txt.Text == "" || password_txt.Text == "")
             {
-                MessageBox.Show("Lutfen bilgileri eksiksiz giriniz");
+                MessageBox.Show("Please enter complete information");
             }
             else
             {
                 SqlCommand cmd = new SqlCommand("Update Tbl_Doktorlar set DoktorAd=@p1,DoktorSoyad=@p2,DoktorBrans=@p3,DoktorSifre=@p4 where DoktorTC=@p6", sql.baglanti());
 
                 cmd.Parameters.AddWithValue("@p6", tc);
-                cmd.Parameters.AddWithValue("@p1", ad_txt.Text);
-                cmd.Parameters.AddWithValue("@p2", soyad_txt.Text);
-                cmd.Parameters.AddWithValue("@p3", brans_txt.Text);
-                cmd.Parameters.AddWithValue("@p4", sifre_txt.Text);
+                cmd.Parameters.AddWithValue("@p1", name_txt.Text);
+                cmd.Parameters.AddWithValue("@p2", surname_txt.Text);
+                cmd.Parameters.AddWithValue("@p3", branch_txt.Text);
+                cmd.Parameters.AddWithValue("@p4", password_txt.Text);
                 cmd.ExecuteNonQuery();
 
                 sql.baglanti().Close();
 
-                DialogResult res = MessageBox.Show("Bilgileriniz Guncellendi", "Bilgi", MessageBoxButtons.OK);
+                DialogResult res = MessageBox.Show("Your Information Has Been Updated", "Info", MessageBoxButtons.OK);
 
                 if(DialogResult.OK == res)
                 {
                     this.Close();
-                    Application.OpenForms["Doktor_Bilgi_Paneli"].Show();
+                    Application.OpenForms["Doctor_Notice_Panel"].Show();
                 }
             }
         }
 
         private void Doktor_Güncelleme_Paneli_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms["Doktor_Bilgi_Paneli"].Show();
+            Application.OpenForms["Doctor_Notice_Panel"].Show();
         }
         Sql_Baglanti sql = new Sql_Baglanti();
 
@@ -65,11 +65,11 @@ namespace Hospital_Project
 
             while (dr.Read())
             {
-                ad_txt.Text = dr[1].ToString();
-                soyad_txt.Text = dr[2].ToString();
+                name_txt.Text = dr[1].ToString();
+                surname_txt.Text = dr[2].ToString();
                 tc_txt.Text = dr[3].ToString();
-                brans_txt.Text = dr[4].ToString();
-                sifre_txt.Text = dr[5].ToString();
+                branch_txt.Text = dr[4].ToString();
+                password_txt.Text = dr[5].ToString();
 
                 sql.baglanti().Close();
             }
@@ -78,7 +78,7 @@ namespace Hospital_Project
         private void btn_geri_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.OpenForms["Doktor_Bilgi_Paneli"].Show();
+            Application.OpenForms["Doctor_Notice_Panel"].Show();
         }
     }
 }

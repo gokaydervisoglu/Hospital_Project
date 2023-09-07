@@ -38,7 +38,7 @@ namespace Hospital_Project
             else
             {
                 key = false;
-                File.Delete("doktor.txt");
+                File.Delete("doctor.txt");
                 keywr();
             }
         }
@@ -46,7 +46,7 @@ namespace Hospital_Project
         private void adminwr()
         {
             string tc, sifre;
-            string path = "doktor.txt";
+            string path = "doctor.txt";
             string path2 = "key2.txt";
 
             tc = tc_txt.Text;
@@ -74,7 +74,7 @@ namespace Hospital_Project
         private void adminrd()
         {
             string tc, sifre;
-            string path = "doktor.txt";
+            string path = "doctor.txt";
 
             if (File.Exists(path))
             {
@@ -100,22 +100,6 @@ namespace Hospital_Project
             }
         }
 
-        private void Doktor_Giris_Paneli_Load(object sender, EventArgs e)
-        {
-            keyrd();
-
-            if (key)
-            {
-                btnhatirla.Checked = true;
-                adminrd();
-            }
-            else
-            {
-                tc_txt.Text = string.Empty;
-                sifre_txt.Text = string.Empty;
-                btnhatirla.Checked = false;
-            }
-        }
 
         Sql_Baglanti sql = new Sql_Baglanti();
 
@@ -126,7 +110,7 @@ namespace Hospital_Project
                 key = true;
                 if (tc_txt.Text != "" && sifre_txt.Text != "")
                 {
-                    File.Delete("doktor.txt");
+                    File.Delete("doctor.txt");
                     adminwr();
                 }
                 else
@@ -137,11 +121,11 @@ namespace Hospital_Project
 
             if (tc_txt.Text == "" || sifre_txt.Text == "")
             {
-                MessageBox.Show("Lütfen kimlik no ve şifreyi giriniz");
+                MessageBox.Show("Please enter ID number and password");
             }
             else
             {
-                SqlCommand cmd = new SqlCommand("Select * From Tbl_Doktorlar where DoktorTC=@p1 and DoktorSifre=@p2", sql.baglanti());
+                SqlCommand cmd = new SqlCommand("Select * From Tbl_doctorlar where doctorTC=@p1 and doctorSifre=@p2", sql.baglanti());
 
                 cmd.Parameters.AddWithValue("@p1", tc_txt.Text);
                 cmd.Parameters.AddWithValue("@p2", sifre_txt.Text);
@@ -157,16 +141,33 @@ namespace Hospital_Project
                 }
                 else
                 {
-                    MessageBox.Show("Hatali Kullanici Adi ya da Sifre");
+                    MessageBox.Show("Incorrect Username or Password");
                 }
             }
 
 
         }
 
-        private void Doktor_Giris_Paneli_FormClosing_1(object sender, FormClosingEventArgs e)
+        private void Doctor_Login_Panel_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.OpenForms["Login_Panel"].Show();
+        }
+
+        private void Doctor_Login_Panel_Load(object sender, EventArgs e)
+        {
+            keyrd();
+
+            if (key)
+            {
+                btnhatirla.Checked = true;
+                adminrd();
+            }
+            else
+            {
+                tc_txt.Text = string.Empty;
+                sifre_txt.Text = string.Empty;
+                btnhatirla.Checked = false;
+            }
         }
     }
 }

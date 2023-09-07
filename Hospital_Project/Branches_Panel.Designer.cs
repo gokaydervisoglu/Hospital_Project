@@ -33,8 +33,8 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
-            this.bransad_txt = new System.Windows.Forms.TextBox();
-            this.bransid_txt = new System.Windows.Forms.TextBox();
+            this.branchname_txt = new System.Windows.Forms.TextBox();
+            this.branchid_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -101,21 +101,21 @@
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
-            // bransad_txt
+            // branchname_txt
             // 
-            this.bransad_txt.Location = new System.Drawing.Point(153, 57);
-            this.bransad_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bransad_txt.Name = "bransad_txt";
-            this.bransad_txt.Size = new System.Drawing.Size(152, 22);
-            this.bransad_txt.TabIndex = 30;
+            this.branchname_txt.Location = new System.Drawing.Point(153, 57);
+            this.branchname_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.branchname_txt.Name = "branchname_txt";
+            this.branchname_txt.Size = new System.Drawing.Size(152, 22);
+            this.branchname_txt.TabIndex = 30;
             // 
-            // bransid_txt
+            // branchid_txt
             // 
-            this.bransid_txt.Location = new System.Drawing.Point(153, 26);
-            this.bransid_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bransid_txt.Name = "bransid_txt";
-            this.bransid_txt.Size = new System.Drawing.Size(152, 22);
-            this.bransid_txt.TabIndex = 29;
+            this.branchid_txt.Location = new System.Drawing.Point(153, 26);
+            this.branchid_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.branchid_txt.Name = "branchid_txt";
+            this.branchid_txt.Size = new System.Drawing.Size(152, 22);
+            this.branchid_txt.TabIndex = 29;
             // 
             // label2
             // 
@@ -148,8 +148,8 @@
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.bransad_txt);
-            this.Controls.Add(this.bransid_txt);
+            this.Controls.Add(this.branchname_txt);
+            this.Controls.Add(this.branchid_txt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -171,8 +171,8 @@
         private Button btn_delete;
         private Button btn_update;
         private Button btn_add;
-        private TextBox bransad_txt;
-        private TextBox bransid_txt;
+        private TextBox branchname_txt;
+        private TextBox branchid_txt;
         private Label label2;
         private Label label1;
     }

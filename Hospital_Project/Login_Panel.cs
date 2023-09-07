@@ -4,82 +4,82 @@ namespace Hospital_Project
 {
     public partial class Login_Panel : Form
     {
-        private Patient_Login_Panel hstgiris;
-        private Secretary_Login_Panel sekretergiris;
-        private Doctor_Login_Panel doktorgirispaneli;
+        private Patient_Login_Panel ptnlogin;
+        private Secretary_Login_Panel scrlogin;
+        private Doctor_Login_Panel drlogin;
         public Login_Panel()
         {
             InitializeComponent();
-            hstgiris = new Patient_Login_Panel();
-            sekretergiris = new Secretary_Login_Panel();
-            doktorgirispaneli = new Doctor_Login_Panel();
+            ptnlogin = new Patient_Login_Panel();
+            scrlogin = new Secretary_Login_Panel();
+            drlogin = new Doctor_Login_Panel();
         }
 
         private void btn_hasta_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            if (hstgiris != null)
+            if (ptnlogin != null)
             {
-                hstgiris.Focus();
+                ptnlogin.Focus();
             }
-            if (sekretergiris != null)
+            if (scrlogin != null)
             {
-                sekretergiris.Close();
+                scrlogin.Close();
             }
-            if (doktorgirispaneli != null)
+            if (drlogin != null)
             {
-                doktorgirispaneli.Close();
+                drlogin.Close();
             }
-            if (hstgiris == null || hstgiris.IsDisposed)
+            if (ptnlogin == null || ptnlogin.IsDisposed)
             {
-                hstgiris = new Patient_Login_Panel();
+                ptnlogin = new Patient_Login_Panel();
             }
 
-            hstgiris.Show();
+            ptnlogin.Show();
         }
 
         private void btn_sekreter_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            if (sekretergiris != null)
+            if (scrlogin != null)
             {
-                sekretergiris.Focus();
+                scrlogin.Focus();
             }
-            if (hstgiris != null)
+            if (ptnlogin != null)
             {
-                hstgiris.Close();
+                ptnlogin.Close();
             }
-            if (doktorgirispaneli != null)
+            if (drlogin != null)
             {
-                doktorgirispaneli.Close();
+                drlogin.Close();
             }
-            if (sekretergiris == null || sekretergiris.IsDisposed)
+            if (scrlogin == null || scrlogin.IsDisposed)
             {
-                sekretergiris = new Secretary_Login_Panel();
+                scrlogin = new Secretary_Login_Panel();
             }
-            sekretergiris.Show();
+            scrlogin.Show();
         }
 
         private void btn_doktor_Click(object sender, EventArgs e)
         {
             this.Hide();
-            if (doktorgirispaneli != null)
+            if (drlogin != null)
             {
-                doktorgirispaneli.Focus();
+                drlogin.Focus();
             }
-            if (sekretergiris != null)
+            if (scrlogin != null)
             {
-                sekretergiris.Close();
+                scrlogin.Close();
             }
-            if (hstgiris != null)
+            if (ptnlogin != null)
             {
-                hstgiris.Close();
+                ptnlogin.Close();
             }
-            if (doktorgirispaneli == null || doktorgirispaneli.IsDisposed)
+            if (drlogin == null || drlogin.IsDisposed)
             {
-                doktorgirispaneli = new Doctor_Login_Panel();
+                drlogin = new Doctor_Login_Panel();
             }
-            doktorgirispaneli.Show();
+            drlogin.Show();
         }
 
         public void FormKapa()

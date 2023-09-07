@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_giris = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.sifre_txt = new System.Windows.Forms.TextBox();
+            this.password_txt = new System.Windows.Forms.TextBox();
             this.sifre_label = new System.Windows.Forms.Label();
             this.tc_txt = new System.Windows.Forms.MaskedTextBox();
             this.no_label = new System.Windows.Forms.Label();
-            this.btnhatirla = new System.Windows.Forms.CheckBox();
+            this.btn_rm = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_giris
+            // btn_login
             // 
-            this.btn_giris.Location = new System.Drawing.Point(229, 194);
-            this.btn_giris.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_giris.Name = "btn_giris";
-            this.btn_giris.Size = new System.Drawing.Size(108, 23);
-            this.btn_giris.TabIndex = 3;
-            this.btn_giris.Text = "Login";
-            this.btn_giris.UseVisualStyleBackColor = true;
-            this.btn_giris.Click += new System.EventHandler(this.btn_giris_Click);
+            this.btn_login.Location = new System.Drawing.Point(229, 194);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(108, 23);
+            this.btn_login.TabIndex = 3;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_giris_Click);
             // 
             // pictureBox1
             // 
@@ -60,13 +60,13 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-            // sifre_txt
+            // password_txt
             // 
-            this.sifre_txt.Location = new System.Drawing.Point(229, 167);
-            this.sifre_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.sifre_txt.Name = "sifre_txt";
-            this.sifre_txt.Size = new System.Drawing.Size(108, 22);
-            this.sifre_txt.TabIndex = 2;
+            this.password_txt.Location = new System.Drawing.Point(229, 167);
+            this.password_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.password_txt.Name = "password_txt";
+            this.password_txt.Size = new System.Drawing.Size(108, 22);
+            this.password_txt.TabIndex = 2;
             // 
             // sifre_label
             // 
@@ -100,16 +100,16 @@
             this.no_label.TabIndex = 13;
             this.no_label.Text = "ID No:";
             // 
-            // btnhatirla
+            // btn_rm
             // 
-            this.btnhatirla.AutoSize = true;
-            this.btnhatirla.Location = new System.Drawing.Point(363, 240);
-            this.btnhatirla.Name = "btnhatirla";
-            this.btnhatirla.Size = new System.Drawing.Size(119, 20);
-            this.btnhatirla.TabIndex = 26;
-            this.btnhatirla.Text = "Remember me";
-            this.btnhatirla.UseVisualStyleBackColor = true;
-            this.btnhatirla.CheckedChanged += new System.EventHandler(this.btnhatirla_CheckedChanged);
+            this.btn_rm.AutoSize = true;
+            this.btn_rm.Location = new System.Drawing.Point(363, 240);
+            this.btn_rm.Name = "btn_rm";
+            this.btn_rm.Size = new System.Drawing.Size(119, 20);
+            this.btn_rm.TabIndex = 26;
+            this.btn_rm.Text = "Remember me";
+            this.btn_rm.UseVisualStyleBackColor = true;
+            this.btn_rm.CheckedChanged += new System.EventHandler(this.btnhatirla_CheckedChanged);
             // 
             // Secretary_Login_Panel
             // 
@@ -117,10 +117,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(488, 267);
-            this.Controls.Add(this.btnhatirla);
-            this.Controls.Add(this.btn_giris);
+            this.Controls.Add(this.btn_rm);
+            this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.sifre_txt);
+            this.Controls.Add(this.password_txt);
             this.Controls.Add(this.sifre_label);
             this.Controls.Add(this.tc_txt);
             this.Controls.Add(this.no_label);
@@ -138,12 +138,12 @@
         }
 
         #endregion
-        private Button btn_giris;
+        private Button btn_login;
         private PictureBox pictureBox1;
-        private TextBox sifre_txt;
+        private TextBox password_txt;
         private Label sifre_label;
         private MaskedTextBox tc_txt;
         private Label no_label;
-        private CheckBox btnhatirla;
+        private CheckBox btn_rm;
     }
 }

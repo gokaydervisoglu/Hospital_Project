@@ -36,7 +36,7 @@ namespace Hospital_Project
 
         private void Doktor_Bilgi_Paneli_Load(object sender, EventArgs e)
         {
-            //Ad ve Soyad Cekme
+            //Name and Surname
             SqlCommand cmd = new SqlCommand("Select DoktorAd,DoktorSoyad From Tbl_Doktorlar where DoktorTC=@p1", sql.baglanti());
 
             cmd.Parameters.AddWithValue("@p1", tc);
@@ -47,14 +47,14 @@ namespace Hospital_Project
 
             while (reader.Read())
             {
-                ad_txt.Text = reader[0].ToString();
-                soyad_txt.Text = reader[1].ToString();
+                name_txt.Text = reader[0].ToString();
+                surname_txt.Text = reader[1].ToString();
                 sql.baglanti().Close();
             }
 
-            //Randevu Paneli Cekme
+            //Appointment panel
             DataTable dt = new DataTable();
-            SqlDataAdapter sqldata = new SqlDataAdapter("Select * from Tbl_Randevu where RandevuDoktor = '" + ad_txt.Text + "'", sql.baglanti());
+            SqlDataAdapter sqldata = new SqlDataAdapter("Select * from Tbl_Randevu where RandevuDoktor = '" + name_txt.Text + "'", sql.baglanti());
 
             sqldata.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -92,11 +92,11 @@ namespace Hospital_Project
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Randevu Alma
+            //Appointment select
             int selectedRow = dataGridView1.CurrentCell.RowIndex;
             id = dataGridView1.Rows[selectedRow].Cells[0].Value.ToString();
 
-            //Sikayet Cekme
+            //Complaint select
       
             SqlCommand cmd2 = new SqlCommand("Select Sikayet from Tbl_Sikayet where RandevuID=@p1", sql.baglanti());
             cmd2.Parameters.AddWithValue("@p1", id);
@@ -104,7 +104,7 @@ namespace Hospital_Project
 
             while (reader.Read())
             {
-                sikayet_txt.Text = reader[0].ToString();
+                appoint_info.Text = reader[0].ToString();
             }
 
             sql.baglanti().Close();

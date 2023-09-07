@@ -31,13 +31,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tc_txt = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_kurtar = new System.Windows.Forms.Button();
-            this.tel_txt = new System.Windows.Forms.MaskedTextBox();
+            this.btn_helper = new System.Windows.Forms.Button();
+            this.phone_txt = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.mail_txt = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_geri = new System.Windows.Forms.Button();
+            this.btn_rtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,24 +72,24 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "ID No:";
             // 
-            // btn_kurtar
+            // btn_helper
             // 
-            this.btn_kurtar.Location = new System.Drawing.Point(171, 221);
-            this.btn_kurtar.Name = "btn_kurtar";
-            this.btn_kurtar.Size = new System.Drawing.Size(164, 48);
-            this.btn_kurtar.TabIndex = 33;
-            this.btn_kurtar.Text = "Create Recovery Request";
-            this.btn_kurtar.UseVisualStyleBackColor = true;
-            this.btn_kurtar.Click += new System.EventHandler(this.btn_kurtar_Click);
+            this.btn_helper.Location = new System.Drawing.Point(171, 221);
+            this.btn_helper.Name = "btn_helper";
+            this.btn_helper.Size = new System.Drawing.Size(164, 48);
+            this.btn_helper.TabIndex = 33;
+            this.btn_helper.Text = "Create Recovery Request";
+            this.btn_helper.UseVisualStyleBackColor = true;
+            this.btn_helper.Click += new System.EventHandler(this.btn_kurtar_Click);
             // 
-            // tel_txt
+            // phone_txt
             // 
-            this.tel_txt.Location = new System.Drawing.Point(171, 162);
-            this.tel_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tel_txt.Mask = "(999) 000-0000";
-            this.tel_txt.Name = "tel_txt";
-            this.tel_txt.Size = new System.Drawing.Size(164, 22);
-            this.tel_txt.TabIndex = 34;
+            this.phone_txt.Location = new System.Drawing.Point(171, 162);
+            this.phone_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.phone_txt.Mask = "(999) 000-0000";
+            this.phone_txt.Name = "phone_txt";
+            this.phone_txt.Size = new System.Drawing.Size(164, 22);
+            this.phone_txt.TabIndex = 34;
             // 
             // label4
             // 
@@ -131,30 +131,30 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "(Please enter all information completely!)";
             // 
-            // btn_geri
+            // btn_rtn
             // 
-            this.btn_geri.Font = new System.Drawing.Font("Calibri Light", 7.8F);
-            this.btn_geri.Location = new System.Drawing.Point(2, 269);
-            this.btn_geri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_geri.Name = "btn_geri";
-            this.btn_geri.Size = new System.Drawing.Size(75, 23);
-            this.btn_geri.TabIndex = 55;
-            this.btn_geri.Text = "Return";
-            this.btn_geri.UseVisualStyleBackColor = true;
-            this.btn_geri.Click += new System.EventHandler(this.btn_geri_Click);
+            this.btn_rtn.Font = new System.Drawing.Font("Calibri Light", 7.8F);
+            this.btn_rtn.Location = new System.Drawing.Point(2, 269);
+            this.btn_rtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_rtn.Name = "btn_rtn";
+            this.btn_rtn.Size = new System.Drawing.Size(75, 23);
+            this.btn_rtn.TabIndex = 55;
+            this.btn_rtn.Text = "Return";
+            this.btn_rtn.UseVisualStyleBackColor = true;
+            this.btn_rtn.Click += new System.EventHandler(this.btn_geri_Click);
             // 
             // Password_Forgot_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 293);
-            this.Controls.Add(this.btn_geri);
+            this.Controls.Add(this.btn_rtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.mail_txt);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tel_txt);
+            this.Controls.Add(this.phone_txt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btn_kurtar);
+            this.Controls.Add(this.btn_helper);
             this.Controls.Add(this.tc_txt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -174,12 +174,12 @@
         private PictureBox pictureBox1;
         private MaskedTextBox tc_txt;
         private Label label3;
-        private Button btn_kurtar;
-        private MaskedTextBox tel_txt;
+        private Button btn_helper;
+        private MaskedTextBox phone_txt;
         private Label label4;
         private Label label1;
         private MaskedTextBox mail_txt;
         private Label label2;
-        private Button btn_geri;
+        private Button btn_rtn;
     }
 }

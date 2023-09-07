@@ -1,6 +1,6 @@
 ﻿namespace Hospital_Project
 {
-    partial class Doktor_Paneli
+    partial class doctor_panel
     {
         /// <summary>
         /// Required designer variable.
@@ -33,11 +33,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.ad_txt = new System.Windows.Forms.TextBox();
-            this.soyad_txt = new System.Windows.Forms.TextBox();
-            this.brans_txt = new System.Windows.Forms.ComboBox();
+            this.name_txt = new System.Windows.Forms.TextBox();
+            this.surname_txt = new System.Windows.Forms.TextBox();
+            this.branch_txt = new System.Windows.Forms.ComboBox();
             this.tc_txt = new System.Windows.Forms.MaskedTextBox();
-            this.sifre_txt = new System.Windows.Forms.TextBox();
+            this.password_txt = new System.Windows.Forms.TextBox();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
@@ -102,30 +102,30 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Dr Password:";
             // 
-            // ad_txt
+            // name_txt
             // 
-            this.ad_txt.Location = new System.Drawing.Point(158, 27);
-            this.ad_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ad_txt.Name = "ad_txt";
-            this.ad_txt.Size = new System.Drawing.Size(152, 22);
-            this.ad_txt.TabIndex = 15;
+            this.name_txt.Location = new System.Drawing.Point(158, 27);
+            this.name_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.name_txt.Name = "name_txt";
+            this.name_txt.Size = new System.Drawing.Size(152, 22);
+            this.name_txt.TabIndex = 15;
             // 
-            // soyad_txt
+            // surname_txt
             // 
-            this.soyad_txt.Location = new System.Drawing.Point(158, 58);
-            this.soyad_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.soyad_txt.Name = "soyad_txt";
-            this.soyad_txt.Size = new System.Drawing.Size(152, 22);
-            this.soyad_txt.TabIndex = 16;
+            this.surname_txt.Location = new System.Drawing.Point(158, 58);
+            this.surname_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.surname_txt.Name = "surname_txt";
+            this.surname_txt.Size = new System.Drawing.Size(152, 22);
+            this.surname_txt.TabIndex = 16;
             // 
-            // brans_txt
+            // branch_txt
             // 
-            this.brans_txt.FormattingEnabled = true;
-            this.brans_txt.Location = new System.Drawing.Point(158, 84);
-            this.brans_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.brans_txt.Name = "brans_txt";
-            this.brans_txt.Size = new System.Drawing.Size(152, 24);
-            this.brans_txt.TabIndex = 17;
+            this.branch_txt.FormattingEnabled = true;
+            this.branch_txt.Location = new System.Drawing.Point(158, 84);
+            this.branch_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.branch_txt.Name = "branch_txt";
+            this.branch_txt.Size = new System.Drawing.Size(152, 24);
+            this.branch_txt.TabIndex = 17;
             // 
             // tc_txt
             // 
@@ -136,13 +136,13 @@
             this.tc_txt.Size = new System.Drawing.Size(152, 22);
             this.tc_txt.TabIndex = 18;
             // 
-            // sifre_txt
+            // password_txt
             // 
-            this.sifre_txt.Location = new System.Drawing.Point(158, 141);
-            this.sifre_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.sifre_txt.Name = "sifre_txt";
-            this.sifre_txt.Size = new System.Drawing.Size(152, 22);
-            this.sifre_txt.TabIndex = 19;
+            this.password_txt.Location = new System.Drawing.Point(158, 141);
+            this.password_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.password_txt.Name = "password_txt";
+            this.password_txt.Size = new System.Drawing.Size(152, 22);
+            this.password_txt.TabIndex = 19;
             // 
             // btn_add
             // 
@@ -204,7 +204,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(446, 197);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Doktor_Paneli
+            // doctor_panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,11 +213,11 @@
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.sifre_txt);
+            this.Controls.Add(this.password_txt);
             this.Controls.Add(this.tc_txt);
-            this.Controls.Add(this.brans_txt);
-            this.Controls.Add(this.soyad_txt);
-            this.Controls.Add(this.ad_txt);
+            this.Controls.Add(this.branch_txt);
+            this.Controls.Add(this.surname_txt);
+            this.Controls.Add(this.name_txt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -225,7 +225,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Doktor_Paneli";
+            this.Name = "doctor_panel";
             this.Text = "Doctor Panel";
             this.Load += new System.EventHandler(this.Doktor_Paneli_Load);
             this.groupBox1.ResumeLayout(false);
@@ -242,11 +242,11 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox ad_txt;
-        private TextBox soyad_txt;
-        private ComboBox brans_txt;
+        private TextBox name_txt;
+        private TextBox surname_txt;
+        private ComboBox branch_txt;
         private MaskedTextBox tc_txt;
-        private TextBox sifre_txt;
+        private TextBox password_txt;
         private Button btn_add;
         private Button btn_update;
         private Button btn_delete;

@@ -23,29 +23,29 @@ namespace Hospital_Project
 
         private void btn_kayit_Click_1(object sender, EventArgs e)
         {
-            if (ad_txt.Text == "" || soyad_txt.Text == "" || tc_txt.Text == "" || tel_txt.Text == "" || cinsiyet_txt.Items == null || sifre_txt.Text == "")
+            if (name_txt.Text == "" || surname_txt.Text == "" || tc_txt.Text == "" || phone_txt.Text == "" || sex_txt.Items == null || password_txt.Text == "")
             {
-                MessageBox.Show("Lütfen Tüm Bilgileri Eksiksiz Giriniz");
+                MessageBox.Show("Please Enter All Information Completely");
             }
             else
             {
                 SqlCommand cmd = new SqlCommand("insert into Tbl_Hastalar (HastaAd,HastaSoyad,HastaTC,HastaTelefon,HastaCinsiyet,HastaSifre) values (@p1,@p2,@p3,@p4,@p5,@p6)", sql.baglanti());
 
-                cmd.Parameters.AddWithValue("@p1", ad_txt.Text);
-                cmd.Parameters.AddWithValue("@p2", soyad_txt.Text);
+                cmd.Parameters.AddWithValue("@p1", name_txt.Text);
+                cmd.Parameters.AddWithValue("@p2", surname_txt.Text);
                 cmd.Parameters.AddWithValue("@p3", tc_txt.Text);
-                cmd.Parameters.AddWithValue("@p4", tel_txt.Text);
-                cmd.Parameters.AddWithValue("@p5", cinsiyet_txt.Text);
-                cmd.Parameters.AddWithValue("@p6", sifre_txt.Text);
+                cmd.Parameters.AddWithValue("@p4", phone_txt.Text);
+                cmd.Parameters.AddWithValue("@p5", sex_txt.Text);
+                cmd.Parameters.AddWithValue("@p6", password_txt.Text);
 
                 cmd.ExecuteNonQuery();
 
-                DialogResult result = MessageBox.Show("Kayit Olundu!" + "Sifreniz =" + sifre_txt.Text, "Bilgi", MessageBoxButtons.OK);
+                DialogResult result = MessageBox.Show("Registered!" + "Password =" + password_txt.Text, "Info", MessageBoxButtons.OK);
                 if (result == DialogResult.OK)
                 {
                     sql.baglanti().Close();
                     this.Close();
-                    Application.OpenForms["Hasta_Giris_Paneli"].Show();
+                    Application.OpenForms["Patient_Login_Panel"].Show();
                 }
 
             }
@@ -54,12 +54,12 @@ namespace Hospital_Project
         private void btn_geri_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Application.OpenForms["Hasta_Giris_Paneli"].Show();
+            Application.OpenForms["Patient_Login_Panel"].Show();
         }
 
         private void Hasta_Kayit_Paneli_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms["Hasta_Giris_Paneli"].Show();
+            Application.OpenForms["Patient_Login_Panel"].Show();
         }
     }
 }

@@ -24,28 +24,28 @@ namespace Hospital_Project
 
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
-            if (ad_txt.Text == "" || soyad_txt.Text == "" || sifre_txt.Text == "")
+            if (name_txt.Text == "" || surname_txt.Text == "" || password_txt.Text == "")
             {
-                MessageBox.Show("Lutfen bilgileri eksiksiz giriniz");
+                MessageBox.Show("Please enter complete information");
             }
             else
             {
                 SqlCommand cmd = new SqlCommand("Update Tbl_Sekreter set SekreterAd=@p1,SekreterSoyad=@p2,SekreterSifre=@p3 where SekreterTC=@p6", sql.baglanti());
 
                 cmd.Parameters.AddWithValue("@p6", tc);
-                cmd.Parameters.AddWithValue("@p1", ad_txt.Text);
-                cmd.Parameters.AddWithValue("@p2", soyad_txt.Text);
-                cmd.Parameters.AddWithValue("@p3", sifre_txt.Text);
+                cmd.Parameters.AddWithValue("@p1", name_txt.Text);
+                cmd.Parameters.AddWithValue("@p2", surname_txt.Text);
+                cmd.Parameters.AddWithValue("@p3", password_txt.Text);
                 cmd.ExecuteNonQuery();
 
                 sql.baglanti().Close();
 
-                DialogResult res = MessageBox.Show("Bilgileriniz Guncellendi", "Bilgi", MessageBoxButtons.OK);
+                DialogResult res = MessageBox.Show("Your Information Has Been Updated", "Info", MessageBoxButtons.OK);
 
                 if (DialogResult.OK == res)
                 {
                     this.Close();
-                    Application.OpenForms["Sekreter_Bilgi_Paneli"].Show();
+                    Application.OpenForms["Secretary_Notice_Panel"].Show();
                 }
             }
         }
@@ -53,7 +53,7 @@ namespace Hospital_Project
         private void btn_geri_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.OpenForms["Sekreter_Bilgi_Paneli"].Show();
+            Application.OpenForms["Secretary_Notice_Panel"].Show();
         }
 
         private void Sekreter_Guncelleme_Paneli_Load(object sender, EventArgs e)
@@ -66,9 +66,9 @@ namespace Hospital_Project
 
             while (dr.Read())
             {
-                ad_txt.Text = dr[1].ToString();
-                soyad_txt.Text = dr[2].ToString();
-                sifre_txt.Text = dr[3].ToString();
+                name_txt.Text = dr[1].ToString();
+                surname_txt.Text = dr[2].ToString();
+                password_txt.Text = dr[3].ToString();
                 tc_txt.Text = dr[4].ToString();
            
 
@@ -78,7 +78,7 @@ namespace Hospital_Project
 
         private void Sekreter_Guncelleme_Paneli_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms["Sekreter_Bilgi_Paneli"].Show();
+            Application.OpenForms["Secretary_Notice_Panel"].Show();
         }
     }
 }
