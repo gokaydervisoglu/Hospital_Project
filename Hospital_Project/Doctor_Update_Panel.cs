@@ -44,14 +44,14 @@ namespace Hospital_Project
                 if(DialogResult.OK == res)
                 {
                     this.Close();
-                    Application.OpenForms["Doctor_Notice_Panel"].Show();
+                    Application.OpenForms["Doctor_Info_Panel"].Show();
                 }
             }
         }
 
         private void Doktor_Güncelleme_Paneli_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms["Doctor_Notice_Panel"].Show();
+            Application.OpenForms["Doctor_Info_Panel"].Show();
         }
         Sql_Baglanti sql = new Sql_Baglanti();
 
@@ -78,7 +78,7 @@ namespace Hospital_Project
         private void btn_geri_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.OpenForms["Doctor_Notice_Panel"].Show();
+            Application.OpenForms["Doctor_Info_Panel"].Show();
         }
     }
 }

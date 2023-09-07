@@ -166,7 +166,7 @@ namespace Hospital_Project
         {
             key = false;
             this.Close();
-            Application.OpenForms["Hasta_Giris_Paneli"].Show();
+            Application.OpenForms["Patient_Login_Panel"].Show();
         }
 
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -125,7 +125,7 @@ namespace Hospital_Project
             }
             else
             {
-                SqlCommand cmd = new SqlCommand("Select * From Tbl_doctorlar where doctorTC=@p1 and doctorSifre=@p2", sql.baglanti());
+                SqlCommand cmd = new SqlCommand("Select * From Tbl_Doktorlar where DoktorTC=@p1 and DoktorSifre=@p2", sql.baglanti());
 
                 cmd.Parameters.AddWithValue("@p1", tc_txt.Text);
                 cmd.Parameters.AddWithValue("@p2", sifre_txt.Text);

@@ -45,7 +45,7 @@ namespace Hospital_Project
                 if (DialogResult.OK == res)
                 {
                     this.Close();
-                    Application.OpenForms["Secretary_Notice_Panel"].Show();
+                    Application.OpenForms["Secretary_Information_Panel"].Show();
                 }
             }
         }
@@ -53,7 +53,7 @@ namespace Hospital_Project
         private void btn_geri_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.OpenForms["Secretary_Notice_Panel"].Show();
+            Application.OpenForms["Secretary_Information_Panel"].Show();
         }
 
         private void Sekreter_Guncelleme_Paneli_Load(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace Hospital_Project
 
         private void Sekreter_Guncelleme_Paneli_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms["Secretary_Notice_Panel"].Show();
+            Application.OpenForms["Secretary_Information_Panel"].Show();
         }
     }
 }

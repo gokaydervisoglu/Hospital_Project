@@ -45,7 +45,7 @@ namespace Hospital_Project
                 if (DialogResult.OK == res)
                 {
                     this.Close();
-                    Application.OpenForms["Patient_Login_Panel"].Show();
+                    Application.OpenForms["Patient_Info_Panel"].Show();
                 }
 
             }
@@ -75,13 +75,13 @@ namespace Hospital_Project
 
         private void Hasta_Güncelleme_Paneli_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.OpenForms["Patient_Login_Panel"].Show();
+            Application.OpenForms["Patient_Info_Panel"].Show();
         }
 
         private void btn_geri_Click(object sender, EventArgs e)
         {
             this.Close();
-            Application.OpenForms["Patient_Login_Panel"].Show();
+            Application.OpenForms["Patient_Info_Panel"].Show();
         }
     }
 }
